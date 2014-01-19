@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/01/14 01:31:26 by mwelsch           #+#    #+#              #
-#    Updated: 2014/01/19 23:23:07 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/01/19 23:39:11 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -49,14 +49,6 @@ RM			= rm -f
 CC			= clang $(CFLAGS)
 CC_D		= clang $(CFLAGS_D)
 
-prepare:
-	@echo Preparinng release build ...
-	@mkdir -p obj/release
-
-prepare_d:
-	@echo Preparing debug build ...
-	@mkdir -p obj/debug
-
 $(NAME): $(UNITS_O) $(LIBFT_TARGET)
 	@echo Linking $^ into $@
 	@$(CC) -o $@ $^ -L/usr/X11/lib -lXext -lX11 -lmlx -lm
@@ -87,8 +79,8 @@ $(MAP_CREATOR_D):
 
 all: debug release
 
-debug: prepare_d  $(NAME_D)
-release: prepare  $(NAME)
+debug: $(NAME_D)
+release: $(NAME)
 
 clean:
 	@echo Removing object files
@@ -104,4 +96,4 @@ re: fclean all
 
 me: all clean
 
-.PHONY: all clean fclean re debug release prepare prepare_d
+.PHONY: all clean fclean re debug release

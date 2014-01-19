@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/19 22:01:04 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/01/19 23:35:07 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/01/19 23:40:58 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	draw_slice_part(struct s_mlx_env *env,
 	line.start.y = part.x;
 	line.end.y = part.y;
 	line.color = color;
-	draw_line(env, l);
+	draw_line(env, line);
 }
 
 void	draw_slice(struct s_mlx_env *env,
@@ -60,13 +60,13 @@ void	draw_slice(struct s_mlx_env *env,
 	{
 		final = env->map->scale / res->distance * proj_plane_dist;
 		vec2_set(&l.start, 0, env->height / 2 - (final ? final / 2 : 0.0f));
-		draw_slice_part(env, l.start, 0x0000ff00);
+		draw_slice_part(env, column, l.start, 0x0000ff00);
 		vec2_set(&l.start,
 				 env->height / 2 - (final ? final / 2 : 0.0f),
 				 env->height / 2 + (final ? final / 2 : 0.0f));
-		draw_slice_part(env, l.start, 0x00ff0000);
+		draw_slice_part(env, column, l.start, 0x00ff0000);
 		vec2_set(&l.start, env->height / 2 + (final ? final / 2 : 0.0f), 0);
-		draw_slice_part(env, l.start, 0x00ffff00);
+		draw_slice_part(env, column, l.start, 0x00ffff00);
 	}
 	else
 		draw_solid_slice(env, column, 0x00000000);

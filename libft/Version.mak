@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/28 04:55:56 by mwelsch           #+#    #+#              #
-#    Updated: 2013/12/28 06:57:59 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/01/19 23:37:31 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -37,4 +37,3 @@ $(VERSION_FILE): $(OBJS) $(OBJS_D)
 	@echo "Version $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_BUILD).$(VERSION_REV): " | cat - $(VERSION_CHANGES) >> $(VERSION_CHANGES).tmp
 	@rm -rf $(VERSION_CHANGES)
 	@mv $(VERSION_CHANGES).tmp $(VERSION_CHANGES)
-	@emacs $(VERSION_CHANGES)
