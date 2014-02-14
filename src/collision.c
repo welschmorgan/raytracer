@@ -6,12 +6,13 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:14:01 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/14 19:40:24 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/14 22:58:17 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "raytracer.h"
 #include <libft_string.h>
 #include <libft_printf.h>
+#include <libft_converters.h>
 
 char				*vec3_tostring(t_vec3 v)
 {
@@ -25,14 +26,15 @@ char				*vec3_tostring(t_vec3 v)
 	return (buf);
 }
 
-int					sphere_tostring(t_sphere s)
+char				*sphere_tostring(t_sphere s)
 {
 	static char		buf[128] = {0};
 
 	ft_strclr(buf);
-	ft_snprintf((char**)&buf, 128, "position:%s, radius:%i.%i",
-				vec3_tostring(v));
-	return (buf);
+	ft_snprintf((char**)&buf, 128, "position:%s, radius:%s",
+				vec3_tostring(s.position),
+				ft_ftoa(s.radius, 4));
+	return ((char*)buf);
 }
 
 int					collision_test_sphere(t_vec3 p, t_sphere sphere)

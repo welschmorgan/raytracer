@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/01/14 01:31:26 by mwelsch           #+#    #+#              #
-#    Updated: 2014/02/14 19:21:29 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/02/14 23:01:09 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -55,31 +55,31 @@ CC			= clang $(CFLAGS)
 CC_D		= clang $(CFLAGS_D)
 
 $(NAME): $(UNITS_O) $(LIBFT_TARGET) $(LIBMATH_TARGET)
-	@echo Linking $^ into $@
+	@printf "\r\033[KLinking $@\n"
 	@$(CC) -o $@ $^ $(LDFLAGS)
 
 $(NAME_D): $(UNITS_OD) $(LIBFT_TARGET_D) $(LIBMATH_TARGET_D)
-	@echo Linking $^ into $@
+	@printf "\r\033[KLinking $@\n"
 	@$(CC_D) -o $@ $^ $(LDFLAGS)
 
 $(LIBFT_TARGET):
-	make $(LIBFT_NAME).a -C $(LIBFT_DIR)
+	make $(LIBFT_NAME).a -s -C $(LIBFT_DIR)
 
 $(LIBFT_TARGET_D):
-	make $(LIBFT_NAME_D).a -C $(LIBFT_DIR)
+	make $(LIBFT_NAME_D).a -s -C $(LIBFT_DIR)
 
 $(LIBMATH_TARGET):
-	make release -C $(LIBMATH_DIR)
+	make release -s -C $(LIBMATH_DIR)
 
 $(LIBMATH_TARGET_D):
-	make debug -C $(LIBMATH_DIR)
+	make debug -s -C $(LIBMATH_DIR)
 
 $(OBJ_RELEASE_DIR)/%.o: src/%.c
-	@echo Compiling $< into $@
+	@printf "\r\033[KCompiling $<"
 	@$(CC) -c -o $@ $< $(INCLUDE)
 
 $(OBJ_DEBUG_DIR)/%.o: src/%.c
-	@echo Compiling $< into $@
+	@printf "\r\033[KCompiling $<"
 	@$(CC_D) -c -o $@ $< $(INCLUDE)
 
 $(MAP_CREATOR):
