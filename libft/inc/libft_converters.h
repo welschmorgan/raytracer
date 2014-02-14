@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/23 01:30:30 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/01/14 04:36:01 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/14 22:00:00 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_CONVERTERS_H
@@ -15,6 +15,7 @@
 # include <libft_config.h>
 
 char					*ft_itoa(int n);
+char					*ft_ftoa(double n, int precision);
 int						ft_atoi(const char *str);
 long					ft_atol(const char *str);
 size_t					ft_number_length(unsigned long num, int base);

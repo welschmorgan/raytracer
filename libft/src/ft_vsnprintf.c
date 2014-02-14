@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/14 01:56:04 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/01/14 03:49:12 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/14 19:27:45 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ size_t				ft_vsnprintf(char **buffer,
 }
 
 size_t				ft_snprintf(char **buffer,
-								 size_t max,
-								 const char *format,
-								 ...)
+								size_t max,
+								const char *format,
+								...)
 {
 	int				ret;
 	va_list			args;

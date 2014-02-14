@@ -5,64 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/01/17 23:59:37 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/01/19 23:27:33 by mwelsch          ###   ########.fr       */
+/*   Created: 2014/02/13 10:28:55 by mwelsch           #+#    #+#             */
+/*   Updated: 2014/02/14 19:02:05 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <libft_memory.h>
-#include "camera.h"
-#include "map.h"
-#include "mlx_env.h"
-#include "ray_result.h"
+#include "raytracer.h"
+#include <libmath.h>
 #include <math.h>
+#include <stddef.h>
 
-/*
-**static t_vec2	VEC2_UNIT_X = {1.0f, 0.0f};
-**static t_vec2	VEC2_UNIT_Y = {0.0f, 1.0f};
-**static t_vec2	VEC2_UNIT_SCALE = {1.0f, 1.0f};
-*/
-
-t_camera		*camera_set(t_camera *cam,
-							t_vec2 position,
-							t_vec2 direction)
+t_vec3					viewplane_point(t_vec2 uv, t_engine *e)
 {
-	if (!cam)
-		return (cam);
-	cam->position = position;
-	cam->direction = direction;
-	return (cam);
+	t_vec3				ret;
+
+	ret.x = ((2.0f * uv.x - (float)e->img.width) / (float)e->img.width)
+		* tan((float)e->cam.fovx);
+	ret.y = ((2.0f * uv.y - (float)e->img.height) / (float)e->img.height)
+		* tan((float)e->cam.fovy);
+	ret.z = -1.0f;
+	return (ret);
 }
 
-t_camera		*camera_init(struct s_mlx_env *env,
-							 t_camera *cam)
+void					camera_lookat(t_engine *e, t_vec3 target)
 {
-	t_vec2		pos;
-
-	if (!cam || !env || !env->height)
-		return (cam);
-	pos.x = 5;
-	pos.y = 5;
-	vec2_set(&cam->position, pos.x, pos.y);
-	vec2_set(&cam->direction, 0.0f, 1.0f);
-	cam->fovy = (env->width / env->height);
-	if (!cam->fovy)
-		cam->fovy = 1.0f;
-	cam->fov = 60.0f * cam->fovy;
-	return (cam);
+	e->cam.direction = vec3_sub(target, e->cam.position);
 }
 
-t_camera		*camera_new(struct s_mlx_env *env,
-							t_vec2 position,
-							t_vec2 look_at)
+t_camera				*camera_init(t_engine *e, t_vec3 pos, t_vec3 lookat)
 {
-	t_camera	*cam;
-
-	cam = ft_memalloc(sizeof(t_camera));
-	if (!cam)
-		return (cam);
-	camera_init(env, cam);
-	camera_set(cam, position, vec2_sub(look_at, position));
-	return (cam);
+	if (!e)
+		return (NULL);
+	e->cam.position = pos;
+	e->cam.direction = vec3_sub(lookat, pos);
+	e->cam.fovx = PI / 4;
+	e->cam.fovy = (e->img.height / e->img.width) * e->cam.fovx;
+	return (&e->cam);
 }

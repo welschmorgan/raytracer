@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 14:02:18 by mwelsch           #+#    #+#              #
-#    Updated: 2014/01/19 15:19:51 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/02/14 21:33:06 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 NAME = libft
@@ -21,7 +21,8 @@ OBJ_DIR = ./obj
 OBJ_DEBUG_DIR = $(OBJ_DIR)/debug
 OBJ_RELEASE_DIR = $(OBJ_DIR)/release
 
-UNITS = ft_atoi.c                ft_putchar_fd.c \
+UNITS = ft_ftoa.c            ft_atoi.c \
+	ft_putchar_fd.c \
 	ft_atol.c                ft_putendl.c \
 	ft_bzero.c               ft_putendl_fd.c \
 	ft_dlist_add_back.c      ft_dlist_dup.c \

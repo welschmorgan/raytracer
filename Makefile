@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/01/14 01:31:26 by mwelsch           #+#    #+#              #
-#    Updated: 2014/01/19 23:39:11 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/02/14 19:21:29 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -16,11 +16,7 @@ SRC_DIR		= ./src
 OBJ_DEBUG_DIR = $(OBJ_DIR)/debug
 OBJ_RELEASE_DIR = $(OBJ_DIR)/release
 
-SRC			= app_name.c  app_version.c app_title.c  die.c  main.c  mlx_env.c \
-				mlx_handlers.c mlx_event.c mlx_buffer.c mlx_buffer_put.c \
-				vec2.c camera.c ray_result.c map.c draw.c event_handler.c \
-				draw_line.c draw_square.c draw_slice.c line.c \
-				camera_rotate.c camera_translate.c
+SRC			= main.c engine.c render.c camera.c color.c collision.c
 OBJ			= $(SRC:.c=.o)
 UNITS		= $(patsubst %, $(SRC_DIR)/%, $(SRC))
 UNITS_O		= $(patsubst %, $(OBJ_RELEASE_DIR)/%, $(OBJ))
@@ -35,33 +31,48 @@ LIBFT_RULE_D = $(LIBFT_NAME_D).a
 LIBFT_TARGET = $(LIBFT_DIR)/$(LIBFT_RULE)
 LIBFT_TARGET_D= $(LIBFT_DIR)/$(LIBFT_RULE_D)
 
-INCLUDE		=  -Iinc -I$(LIBFT_INC)
+LIBMATH_NAME	= libmath
+LIBMATH_NAME_D= $(LIBMATH_NAME)_d
+LIBMATH_DIR	= ./$(LIBMATH_NAME)
+LIBMATH_INC = $(LIBMATH_DIR)/inc
+LIBMATH_RULE	= $(LIBMATH_NAME).a
+LIBMATH_RULE_D = $(LIBMATH_NAME_D).a
+LIBMATH_TARGET = $(LIBMATH_DIR)/$(LIBMATH_RULE)
+LIBMATH_TARGET_D= $(LIBMATH_DIR)/$(LIBMATH_RULE_D)
 
-NAME		= wolf3d
+INCLUDE		=  -Iinc -I$(LIBFT_INC) -I$(LIBMATH_INC) -I/usr/include/X11
+
+NAME		= rtv1
 NAME_D		= $(NAME)_d
 
 FLAGS		= -W -Wall -Werror -ansi -std=c89 -pedantic -Qunused-arguments \
-				-I$(INC_DIR) -I$(LIBFT_INC)
+				$(INCLUDE)
 CFLAGS		= $(FLAGS) -O3
 CFLAGS_D	= $(FLAGS) -ggdb -D_DEBUG
-
+LDFLAGS		= -L/usr/X11/lib -lXext -lX11 -lmlx -lm
 RM			= rm -f
 CC			= clang $(CFLAGS)
 CC_D		= clang $(CFLAGS_D)
 
-$(NAME): $(UNITS_O) $(LIBFT_TARGET)
+$(NAME): $(UNITS_O) $(LIBFT_TARGET) $(LIBMATH_TARGET)
 	@echo Linking $^ into $@
-	@$(CC) -o $@ $^ -L/usr/X11/lib -lXext -lX11 -lmlx -lm
+	@$(CC) -o $@ $^ $(LDFLAGS)
 
-$(NAME_D): $(UNITS_OD) $(LIBFT_TARGET_D)
+$(NAME_D): $(UNITS_OD) $(LIBFT_TARGET_D) $(LIBMATH_TARGET_D)
 	@echo Linking $^ into $@
-	@$(CC_D) -o $@ $^ -L/usr/X11/lib -lXext -lX11 -lmlx -lm
+	@$(CC_D) -o $@ $^ $(LDFLAGS)
 
 $(LIBFT_TARGET):
 	make $(LIBFT_NAME).a -C $(LIBFT_DIR)
 
 $(LIBFT_TARGET_D):
 	make $(LIBFT_NAME_D).a -C $(LIBFT_DIR)
+
+$(LIBMATH_TARGET):
+	make release -C $(LIBMATH_DIR)
+
+$(LIBMATH_TARGET_D):
+	make debug -C $(LIBMATH_DIR)
 
 $(OBJ_RELEASE_DIR)/%.o: src/%.c
 	@echo Compiling $< into $@
