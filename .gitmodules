@@ -1,3 +1,6 @@
 [submodule "libft"]
 	path = libft
 	url = dev_darkboss@git.quantum-realm.com:libft
+[submodule "libmath"]
+	path = libmath
+	url = dev_darkboss@git.quantum-realm.com:libmath
