@@ -1,5 +1,0 @@
-obj/*.o
-obj/release/*.o
-obj/debug/*.o
-libmath.a
-libmath_d.a
