@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 14:02:18 by mwelsch           #+#    #+#              #
-#    Updated: 2014/02/14 21:33:06 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/02/14 22:16:08 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 NAME = libft
@@ -110,19 +110,19 @@ debug: $(TARGET_D)
 release: $(TARGET)
 
 $(TARGET): $(OBJS) $(VERSION_FILE)
-	@echo Linking $^ into $@
+	@printf "\r\033[KLinking $@\n"
 	@$(LD) $@ $^
 
 $(TARGET_D): $(OBJS_D) $(VERSION_FILE)
-	@echo Linking $^ into $@
+	@printf "\r\033[KLinking $@\n"
 	@$(LD) $@ $^
 
 $(OBJ_DEBUG_DIR)/%.o: $(SRC_DIR)/%.c
-	@echo Compiling $< into $@
+	@printf "\r\033[KCompiling $< into $@"
 	@$(CC_D) -c -I$(INC_DIR) -o $@ $<
 
 $(OBJ_RELEASE_DIR)/%.o: $(SRC_DIR)/%.c
-	@echo Compiling $< into $@
+	@printf "\r\033[KCompiling $< into $@"
 	@$(CC) -c -I$(INC_DIR) -o $@ $<
 
 
