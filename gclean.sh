@@ -1,6 +1,6 @@
 #!/bin/sh
 
-./fetch_modules.sh
+./gmods.sh
 for mod in libft libmath; do
 	echo Removing $mod/.git
 	rm -ir $mod/.git
