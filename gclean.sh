@@ -1,9 +1,14 @@
 #!/bin/sh
 
+function myrm()
+{
+	echo Removing $@
+	rm -rf $@
+}
+
 ./gmods.sh
 for mod in libft libmath; do
-	echo Removing $mod/.git
-	rm -ir $mod/.git
+	myrm $mod/.git
 done
-rm -ri .gitmodules
-rm -ri *.sh
+myrm .gitmodules
+myrm *.sh
