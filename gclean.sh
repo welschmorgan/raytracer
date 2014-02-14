@@ -1,6 +1,6 @@
 #!/bin/sh
 
-function myrm()
+function myrm ()
 {
 	echo Removing $@
 	rm -rf $@
