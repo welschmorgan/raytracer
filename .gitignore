@@ -1,0 +1,5 @@
+obj/*.o
+obj/debug/*.o
+obj/release/*.o
+rtv1.a
+rtv1_d.a
