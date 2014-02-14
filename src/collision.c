@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:14:01 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/14 22:58:17 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/15 00:49:11 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "raytracer.h"
@@ -41,6 +41,7 @@ int					collision_test_sphere(t_vec3 p, t_sphere sphere)
 {
 	int					v[3];
 
+	ft_printf("Testing sphere: %s\n", sphere_tostring(sphere));
 	v[VEC_X] = p.x >= sphere.position.x
 		&& p.x <= (sphere.position.x + sphere.radius);
 	v[VEC_Y] = p.x >= sphere.position.x
