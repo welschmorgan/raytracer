@@ -6220,4 +6220,1918 @@ Day changed to 15 Feb 2014[K[47;11H[34h[?25h[?25l[#42-int] [34h[?25h[K
 [37m % [0m[39m[49m[K[157C[[33m0:15:09[00m][166Dlls
 auteur  [0m[01;32mgclean.sh[0m  [01;32mgmods.sh[0m  [01;32mgsync.sh[0m  [01;34minc[0m  [01;34mlibft[0m  [01;34mlibmath[0m  Makefile  [01;34mobj[0m  [01;32mrtv1[0m  [01;32mrtv1_d[0m  screenlog.0  [01;34msrc[0m
 [1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1
-[37m % [0m[39m[49m[K[157C[[33m0:15:13[00m][166D
+[37m % [0m[39m[49m[K[157C[[33m0:15:13[00m][166D../gsync.sh[1m [0m[0m 
+Removing objects
+Removing targets
+[test 4d5b5c0] Synchronizing Project
+ 7 files changed, 7 insertions(+), 5 deletions(-)
+Counting objects: 23, done.
+Delta compression using up to 2 threads.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 3.34 KiB, done.
+Total 12 (delta 7), reused 0 (delta 0)
+To dev_darkboss@git.quantum-realm.com:libft
+   7c6cd34..4d5b5c0  test -> test
+[master 48c9cea] Synchronizing Project
+ 2 files changed, 9 insertions(+), 5 deletions(-)
+Counting objects: 11, done.
+Delta compression using up to 2 threads.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 634 bytes, done.
+Total 6 (delta 5), reused 0 (delta 0)
+To dev_darkboss@git.quantum-realm.com:libmath
+   3baf1b5..48c9cea  master -> master
+Removing object files
+Removing targets
+[master d369bd7] Synchronizing Project
+ 7 files changed, 6330 insertions(+), 60 deletions(-)
+ create mode 100644 screenlog.0
+Counting objects: 16, done.
+Delta compression using up to 2 threads.
+Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
+Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 105.36 KiB, done.
+Total 9 (delta 6), reused 0 (delta 0)
+To dev_darkboss@git.quantum-realm.com:rtv1
+   3487dbc..d369bd7  master -> master
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1
+[37m % [0m[39m[49m[K[157C[[33m0:16:15[00m][166Dccd libft
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:16:18[00m][166Dlls
+auteur  [0m[01;34minc[0m  Makefile  [01;34mobj[0m  [01;34msrc[0m  [01;34mtests[0m  Version.mak
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:16:20[00m][166Dmmake 
+[KCompiling src/ft_ftoa.c into obj/release/ft_ftoa.o[KCompiling src/ft_atoi.c into obj/release/ft_atoi.o[KCompiling src/ft_putchar_fd.c into obj/release/ft_putchar_fd.o[KCompiling src/ft_atol.c into obj/release/ft_atol.o[KCompiling src/ft_putendl.c into obj/release/ft_putendl.o[KCompiling src/ft_bzero.c into obj/release/ft_bzero.o[KCompiling src/ft_putendl_fd.c into obj/release/ft_putendl_fd.o[KCompiling src/ft_dlist_add_back.c into obj/release/ft_dlist_add_back.o[KCompiling src/ft_dlist_dup.c into obj/release/ft_dlist_dup.o[KCompiling src/ft_dlist_add_front.c into obj/release/ft_dlist_add_front.o[KCompiling src/ft_dlist_init.c into obj/release/ft_dlist_init.o[KCompiling src/ft_dlist_clear.c into obj/release/ft_dlist_clear.o[KCompiling src/ft_dlist_node.c into obj/release/ft_dlist_node.o[KCompiling src/ft_dlist_copy.c into obj/release/ft_dlist_copy.o[KCompiling src/ft_dlist_remove.c into obj/release/ft_dlist_remove.o[KCompiling src/ft_dlist_destroy.c into obj/release/ft_dlist_destroy.o[KCompiling src/ft_putnbr.c into obj/release/ft_putnbr.o[KCompiling src/ft_putnbr_fd.c into obj/release/ft_putnbr_fd.o[KCompiling src/ft_error.c into obj/release/ft_error.o[KCompiling src/ft_putstr.c into obj/release/ft_putstr.o[KCompiling src/ft_file_access.c into obj/release/ft_file_access.o[KCompiling src/ft_putstr_fd.c into obj/release/ft_putstr_fd.o[KCompiling src/ft_file.c into obj/release/ft_file.o[KCompiling src/ft_readdir.c into obj/release/ft_readdir.o[KCompiling src/ft_fprintf.c into obj/release/ft_fprintf.o[KCompiling src/ft_realloc.c into obj/release/ft_realloc.o[KCompiling src/ft_getline.c into obj/release/ft_getline.o[KCompiling src/ft_search_file.c into obj/release/ft_search_file.o[KCompiling src/ft_isalnum.c into obj/release/ft_isalnum.o[KCompiling src/ft_strcat.c into obj/release/ft_strcat.o[KCompiling src/ft_isalpha.c into obj/release/ft_isalpha.o[KCompiling src/ft_strchr.c into obj/release/ft_strchr.o[KCompiling src/ft_isanyof.c into obj/release/ft_isanyof.o[KCompiling src/ft_strclr.c into obj/release/ft_strclr.o[KCompiling src/ft_isascii.c into obj/release/ft_isascii.o[KCompiling src/ft_strcmp.c into obj/release/ft_strcmp.o[KCompiling src/ft_isdigit.c into obj/release/ft_isdigit.o[KCompiling src/ft_strcpy.c into obj/release/ft_strcpy.o[KCompiling src/ft_isempty.c into obj/release/ft_isempty.o[KCompiling src/ft_strdel.c into obj/release/ft_strdel.o[KCompiling src/ft_islower.c into obj/release/ft_islower.o[KCompiling src/ft_strdup.c into obj/release/ft_strdup.o[KCompiling src/ft_isprint.c into obj/release/ft_isprint.o[KCompiling src/ft_strempty.c into obj/release/ft_strempty.o[KCompiling src/ft_isspace.c into obj/release/ft_isspace.o[KCompiling src/ft_strequ.c into obj/release/ft_strequ.o[KCompiling src/ft_isupper.c into obj/release/ft_isupper.o[KCompiling src/ft_strfind.c into obj/release/ft_strfind.o[KCompiling src/ft_itoa.c into obj/release/ft_itoa.o[KCompiling src/ft_striter.c into obj/release/ft_striter.o[KCompiling src/ft_lstadd.c into obj/release/ft_lstadd.o[KCompiling src/ft_striteri.c into obj/release/ft_striteri.o[KCompiling src/ft_lstback.c into obj/release/ft_lstback.o[KCompiling src/ft_strjoin.c into obj/release/ft_strjoin.o[KCompiling src/ft_lstdel.c into obj/release/ft_lstdel.o[KCompiling src/ft_strlcat.c into obj/release/ft_strlcat.o[KCompiling src/ft_lstdelone.c into obj/release/ft_lstdelone.o[KCompiling src/ft_strlen.c into obj/release/ft_strlen.o[KCompiling src/ft_lsteq.c into obj/release/ft_lsteq.o[KCompiling src/ft_strmap.c into obj/release/ft_strmap.o[KCompiling src/ft_lstfront.c into obj/release/ft_lstfront.o[KCompiling src/ft_strmapi.c into obj/release/ft_strmapi.o[KCompiling src/ft_lstiter.c into obj/release/ft_lstiter.o[KCompiling src/ft_strmatch.c into obj/release/ft_strmatch.o[KCompiling src/ft_lstlast.c into obj/release/ft_lstlast.o[KCompiling src/ft_strncat.c into obj/release/ft_strncat.o[KCompiling src/ft_lstmap.c into obj/release/ft_lstmap.o[KCompiling src/ft_strncmp.c into obj/release/ft_strncmp.o[KCompiling src/ft_lstneq.c into obj/release/ft_lstneq.o[KCompiling src/ft_strncpy.c into obj/release/ft_strncpy.o[KCompiling src/ft_lstnew.c into obj/release/ft_lstnew.o[KCompiling src/ft_strndup.c into obj/release/ft_strndup.o[KCompiling src/ft_lstpop_back.c into obj/release/ft_lstpop_back.o[KCompiling src/ft_strnequ.c into obj/release/ft_strnequ.o[KCompiling src/ft_lstpop_front.c into obj/release/ft_lstpop_front.o[KCompiling src/ft_strnew.c into obj/release/ft_strnew.o[KCompiling src/ft_lstpush_back.c into obj/release/ft_lstpush_back.o[KCompiling src/ft_strnstr.c into obj/release/ft_strnstr.o[KCompiling src/ft_lstpush_front.c into obj/release/ft_lstpush_front.o[KCompiling src/ft_strrchr.c into obj/release/ft_strrchr.o[KCompiling src/ft_lstsize.c into obj/release/ft_lstsize.o[KCompiling src/ft_strrev.c into obj/release/ft_strrev.o[KCompiling src/ft_memalloc.c into obj/release/ft_memalloc.o[KCompiling src/ft_strsplit.c into obj/release/ft_strsplit.o[KCompiling src/ft_memccpy.c into obj/release/ft_memccpy.o[KCompiling src/ft_strstr.c into obj/release/ft_strstr.o[KCompiling src/ft_memchr.c into obj/release/ft_memchr.o[KCompiling src/ft_strsub.c into obj/release/ft_strsub.o[KCompiling src/ft_memcmp.c into obj/release/ft_memcmp.o[KCompiling src/ft_strtok.c into obj/release/ft_strtok.o[KCompiling src/ft_memcpy.c into obj/release/ft_memcpy.o[KCompiling src/ft_strtolower.c into obj/release/ft_strtolower.o[KCompiling src/ft_memdel.c into obj/release/ft_memdel.o[KCompiling src/ft_strtoupper.c into obj/release/ft_strtoupper.o[KCompiling src/ft_memdup.c into obj/release/ft_memdup.o[KCompiling src/ft_strtrim.c into obj/release/ft_strtrim.o[KCompiling src/ft_memmove.c into obj/release/ft_memmove.o[KCompiling src/ft_swap.c into obj/release/ft_swap.o[KCompiling src/ft_memrealloc.c into obj/release/ft_memrealloc.o[KCompiling src/ft_tokdel.c into obj/release/ft_tokdel.o[KCompiling src/ft_memset.c into obj/release/ft_memset.o[KCompiling src/ft_tolower.c into obj/release/ft_tolower.o[KCompiling src/ft_ntoa.c into obj/release/ft_ntoa.o[KCompiling src/ft_toupper.c into obj/release/ft_toupper.o[KCompiling src/ft_number_length.c into obj/release/ft_number_length.o[KCompiling src/ft_version.c into obj/release/ft_version.o[KCompiling src/ft_opendir.c into obj/release/ft_opendir.o[KCompiling src/ft_vfprintf.c into obj/release/ft_vfprintf.o[KCompiling src/ft_parse_printf_char.c into obj/release/ft_parse_printf_char.o[KCompiling src/ft_vprintf.c into obj/release/ft_vprintf.o[KCompiling src/ft_printf.c into obj/release/ft_printf.o[KCompiling src/ft_vsnprintf.c into obj/release/ft_vsnprintf.o[KCompiling src/ft_printf_do_bool.c into obj/release/ft_printf_do_bool.o[KCompiling src/ft_vsnprintf_char.c into obj/release/ft_vsnprintf_char.o[KCompiling src/ft_printf_do_char.c into obj/release/ft_printf_do_char.o[KCompiling src/ft_vsnprintf_float.c into obj/release/ft_vsnprintf_float.o[KCompiling src/ft_printf_do_int.c into obj/release/ft_printf_do_int.o[KCompiling src/ft_vsnprintf_hexa.c into obj/release/ft_vsnprintf_hexa.o[KCompiling src/ft_printf_do_numbers.c into obj/release/ft_printf_do_numbers.o[KCompiling src/ft_vsnprintf_loop.c into obj/release/ft_vsnprintf_loop.o[KCompiling src/ft_printf_do_pointers.c into obj/release/ft_printf_do_pointers.o[KCompiling src/ft_vsnprintf_signed.c into obj/release/ft_vsnprintf_signed.o[KCompiling src/ft_printf_do_string.c into obj/release/ft_printf_do_string.o[KCompiling src/ft_vsnprintf_step.c into obj/release/ft_vsnprintf_step.o[KCompiling src/ft_printf_parse_width.c into obj/release/ft_printf_parse_width.o[KCompiling src/ft_vsnprintf_string.c into obj/release/ft_vsnprintf_string.o[KCompiling src/ft_putchar.c into obj/release/ft_putchar.o[KCompiling src/ft_vsnprintf_unsigned.c into obj/release/ft_vsnprintf_unsigned.o[KCompiling src/ft_ftoa.c into obj/debug/ft_ftoa.o[KCompiling src/ft_atoi.c into obj/debug/ft_atoi.o[KCompiling src/ft_putchar_fd.c into obj/debug/ft_putchar_fd.o[KCompiling src/ft_atol.c into obj/debug/ft_atol.o[KCompiling src/ft_putendl.c into obj/debug/ft_putendl.o[KCompiling src/ft_bzero.c into obj/debug/ft_bzero.o[KCompiling src/ft_putendl_fd.c into obj/debug/ft_putendl_fd.o[KCompiling src/ft_dlist_add_back.c into obj/debug/ft_dlist_add_back.o[KCompiling src/ft_dlist_dup.c into obj/debug/ft_dlist_dup.o[KCompiling src/ft_dlist_add_front.c into obj/debug/ft_dlist_add_front.o[KCompiling src/ft_dlist_init.c into obj/debug/ft_dlist_init.o[KCompiling src/ft_dlist_clear.c into obj/debug/ft_dlist_clear.o[KCompiling src/ft_dlist_node.c into obj/debug/ft_dlist_node.o[KCompiling src/ft_dlist_copy.c into obj/debug/ft_dlist_copy.o[KCompiling src/ft_dlist_remove.c into obj/debug/ft_dlist_remove.o[KCompiling src/ft_dlist_destroy.c into obj/debug/ft_dlist_destroy.o[KCompiling src/ft_putnbr.c into obj/debug/ft_putnbr.o[KCompiling src/ft_putnbr_fd.c into obj/debug/ft_putnbr_fd.o[KCompiling src/ft_error.c into obj/debug/ft_error.o[KCompiling src/ft_putstr.c into obj/debug/ft_putstr.o[KCompiling src/ft_file_access.c into obj/debug/ft_file_access.o[KCompiling src/ft_putstr_fd.c into obj/debug/ft_putstr_fd.o[KCompiling src/ft_file.c into obj/debug/ft_file.o[KCompiling src/ft_readdir.c into obj/debug/ft_readdir.o[KCompiling src/ft_fprintf.c into obj/debug/ft_fprintf.o[KCompiling src/ft_realloc.c into obj/debug/ft_realloc.o[KCompiling src/ft_getline.c into obj/debug/ft_getline.o[KCompiling src/ft_search_file.c into obj/debug/ft_search_file.o[KCompiling src/ft_isalnum.c into obj/debug/ft_isalnum.o[KCompiling src/ft_strcat.c into obj/debug/ft_strcat.o[KCompiling src/ft_isalpha.c into obj/debug/ft_isalpha.o[KCompiling src/ft_strchr.c into obj/debug/ft_strchr.o[KCompiling src/ft_isanyof.c into obj/debug/ft_isanyof.o[KCompiling src/ft_strclr.c into obj/debug/ft_strclr.o[KCompiling src/ft_isascii.c into obj/debug/ft_isascii.o[KCompiling src/ft_strcmp.c into obj/debug/ft_strcmp.o[KCompiling src/ft_isdigit.c into obj/debug/ft_isdigit.o[KCompiling src/ft_strcpy.c into obj/debug/ft_strcpy.o[KCompiling src/ft_isempty.c into obj/debug/ft_isempty.o[KCompiling src/ft_strdel.c into obj/debug/ft_strdel.o[KCompiling src/ft_islower.c into obj/debug/ft_islower.o[KCompiling src/ft_strdup.c into obj/debug/ft_strdup.o[KCompiling src/ft_isprint.c into obj/debug/ft_isprint.o[KCompiling src/ft_strempty.c into obj/debug/ft_strempty.o[KCompiling src/ft_isspace.c into obj/debug/ft_isspace.o[KCompiling src/ft_strequ.c into obj/debug/ft_strequ.o[KCompiling src/ft_isupper.c into obj/debug/ft_isupper.o[KCompiling src/ft_strfind.c into obj/debug/ft_strfind.o[KCompiling src/ft_itoa.c into obj/debug/ft_itoa.o[KCompiling src/ft_striter.c into obj/debug/ft_striter.o[KCompiling src/ft_lstadd.c into obj/debug/ft_lstadd.o[KCompiling src/ft_striteri.c into obj/debug/ft_striteri.o[KCompiling src/ft_lstback.c into obj/debug/ft_lstback.o[KCompiling src/ft_strjoin.c into obj/debug/ft_strjoin.o[KCompiling src/ft_lstdel.c into obj/debug/ft_lstdel.o[KCompiling src/ft_strlcat.c into obj/debug/ft_strlcat.o[KCompiling src/ft_lstdelone.c into obj/debug/ft_lstdelone.o[KCompiling src/ft_strlen.c into obj/debug/ft_strlen.o[KCompiling src/ft_lsteq.c into obj/debug/ft_lsteq.o[KCompiling src/ft_strmap.c into obj/debug/ft_strmap.o[KCompiling src/ft_lstfront.c into obj/debug/ft_lstfront.o[KCompiling src/ft_strmapi.c into obj/debug/ft_strmapi.o[KCompiling src/ft_lstiter.c into obj/debug/ft_lstiter.o[KCompiling src/ft_strmatch.c into obj/debug/ft_strmatch.o[KCompiling src/ft_lstlast.c into obj/debug/ft_lstlast.o[KCompiling src/ft_strncat.c into obj/debug/ft_strncat.o[KCompiling src/ft_lstmap.c into obj/debug/ft_lstmap.o[KCompiling src/ft_strncmp.c into obj/debug/ft_strncmp.o[KCompiling src/ft_lstneq.c into obj/debug/ft_lstneq.o[KCompiling src/ft_strncpy.c into obj/debug/ft_strncpy.o[KCompiling src/ft_lstnew.c into obj/debug/ft_lstnew.o[KCompiling src/ft_strndup.c into obj/debug/ft_strndup.o[KCompiling src/ft_lstpop_back.c into obj/debug/ft_lstpop_back.o[KCompiling src/ft_strnequ.c into obj/debug/ft_strnequ.o[KCompiling src/ft_lstpop_front.c into obj/debug/ft_lstpop_front.o[KCompiling src/ft_strnew.c into obj/debug/ft_strnew.o[KCompiling src/ft_lstpush_back.c into obj/debug/ft_lstpush_back.o[KCompiling src/ft_strnstr.c into obj/debug/ft_strnstr.o[KCompiling src/ft_lstpush_front.c into obj/debug/ft_lstpush_front.o[KCompiling src/ft_strrchr.c into obj/debug/ft_strrchr.o[KCompiling src/ft_lstsize.c into obj/debug/ft_lstsize.o[KCompiling src/ft_strrev.c into obj/debug/ft_strrev.o[KCompiling src/ft_memalloc.c into obj/debug/ft_memalloc.o[KCompiling src/ft_strsplit.c into obj/debug/ft_strsplit.o[KCompiling src/ft_memccpy.c into obj/debug/ft_memccpy.o[KCompiling src/ft_strstr.c into obj/debug/ft_strstr.o[KCompiling src/ft_memchr.c into obj/debug/ft_memchr.o[KCompiling src/ft_strsub.c into obj/debug/ft_strsub.o[KCompiling src/ft_memcmp.c into obj/debug/ft_memcmp.o[KCompiling src/ft_strtok.c into obj/debug/ft_strtok.o[KCompiling src/ft_memcpy.c into obj/debug/ft_memcpy.o[KCompiling src/ft_strtolower.c into obj/debug/ft_strtolower.o[KCompiling src/ft_memdel.c into obj/debug/ft_memdel.o[KCompiling src/ft_strtoupper.c into obj/debug/ft_strtoupper.o[KCompiling src/ft_memdup.c into obj/debug/ft_memdup.o[KCompiling src/ft_strtrim.c into obj/debug/ft_strtrim.o[KCompiling src/ft_memmove.c into obj/debug/ft_memmove.o[KCompiling src/ft_swap.c into obj/debug/ft_swap.o[KCompiling src/ft_memrealloc.c into obj/debug/ft_memrealloc.o[KCompiling src/ft_tokdel.c into obj/debug/ft_tokdel.o[KCompiling src/ft_memset.c into obj/debug/ft_memset.o[KCompiling src/ft_tolower.c into obj/debug/ft_tolower.o[KCompiling src/ft_ntoa.c into obj/debug/ft_ntoa.o[KCompiling src/ft_toupper.c into obj/debug/ft_toupper.o[KCompiling src/ft_number_length.c into obj/debug/ft_number_length.o[KCompiling src/ft_version.c into obj/debug/ft_version.o[KCompiling src/ft_opendir.c into obj/debug/ft_opendir.o[KCompiling src/ft_vfprintf.c into obj/debug/ft_vfprintf.o[KCompiling src/ft_parse_printf_char.c into obj/debug/ft_parse_printf_char.o[KCompiling src/ft_vprintf.c into obj/debug/ft_vprintf.o[KCompiling src/ft_printf.c into obj/debug/ft_printf.o[KCompiling src/ft_vsnprintf.c into obj/debug/ft_vsnprintf.o[KCompiling src/ft_printf_do_bool.c into obj/debug/ft_printf_do_bool.o[KCompiling src/ft_vsnprintf_char.c into obj/debug/ft_vsnprintf_char.o[KCompiling src/ft_printf_do_char.c into obj/debug/ft_printf_do_char.o[KCompiling src/ft_vsnprintf_float.c into obj/debug/ft_vsnprintf_float.o[KCompiling src/ft_printf_do_int.c into obj/debug/ft_printf_do_int.o[KCompiling src/ft_vsnprintf_hexa.c into obj/debug/ft_vsnprintf_hexa.o[KCompiling src/ft_printf_do_numbers.c into obj/debug/ft_printf_do_numbers.o[KCompiling src/ft_vsnprintf_loop.c into obj/debug/ft_vsnprintf_loop.o[KCompiling src/ft_printf_do_pointers.c into obj/debug/ft_printf_do_pointers.o[KCompiling src/ft_vsnprintf_signed.c into obj/debug/ft_vsnprintf_signed.o[KCompiling src/ft_printf_do_string.c into obj/debug/ft_printf_do_string.o[KCompiling src/ft_vsnprintf_step.c into obj/debug/ft_vsnprintf_step.o[KCompiling src/ft_printf_parse_width.c into obj/debug/ft_printf_parse_width.o[KCompiling src/ft_vsnprintf_string.c into obj/debug/ft_vsnprintf_string.o[KCompiling src/ft_putchar.c into obj/debug/ft_putchar.o[KCompiling src/ft_vsnprintf_unsigned.c into obj/debug/ft_vsnprintf_unsigned.o[KUpdating version (1.0.339.1216)
+[KLinking libft.a
+[KLinking libft_d.a
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:16:31[00m][166Dccat .changelog[1m [0m[0m 
+Version 1.0.339.1216: Library build (2014/02/16 at 00:16:31)
+Version 1.0.338.823: Library build (2014/02/15 at 20:23:46)
+Version 1.0.337.818: Library build (2014/02/15 at 20:18:59)
+Version 1.0.336.853: Library build (2014/02/15 at 08:53:42)
+Version 1.0.335.844: Library build (2014/02/15 at 08:44:06)
+Version 1.0.334.828: Library build (2014/02/15 at 08:28:05)
+Version 1.0.333.826: Library build (2014/02/15 at 08:26:30)
+Version 1.0.332.823: Library build (2014/02/15 at 08:23:37)
+Version 1.0.331.816: Library build (2014/02/15 at 08:16:13)
+Version 1.0.330.813: Library build (2014/02/15 at 08:13:45)
+Version 1.0.329.811: Library build (2014/02/15 at 08:11:07)
+Version 1.0.328.809: Library build (2014/02/15 at 08:09:09)
+Version 1.0.327.801: Library build (2014/02/15 at 08:01:40)
+Version 1.0.326.655: Library build (2014/02/15 at 06:55:41)
+Version 1.0.325.613: Library build (2014/02/15 at 06:13:43)
+Version 1.0.324.611: Library build (2014/02/15 at 06:11:16)
+Version 1.0.323.608: Library build (2014/02/15 at 06:08:58)
+Version 1.0.322.358: Library build (2014/02/15 at 03:58:11)
+Version 1.0.321.354: Library build (2014/02/15 at 03:54:19)
+Version 1.0.320.349: Library build (2014/02/15 at 03:49:25)
+Version 1.0.319.333: Library build (2014/02/15 at 03:33:55)
+Version 1.0.318.309: Library build (2014/02/15 at 03:09:50)
+Version 1.0.317.258: Library build (2014/02/15 at 02:58:32)
+Version 1.0.316.257: Library build (2014/02/15 at 02:57:01)
+Version 1.0.315.256: Library build (2014/02/15 at 02:56:39)
+Version 1.0.314.228: Library build (2014/02/15 at 02:28:00)
+Version 1.0.313.139: Library build (2014/02/15 at 01:39:42)
+Version 1.0.312.133: Library build (2014/02/15 at 01:33:44)
+Version 1.0.311.127: Library build (2014/02/15 at 01:27:34)
+Version 1.0.310.051: Library build (2014/02/15 at 00:51:05)
+Version 1.0.309.002: Library build (2014/02/15 at 00:49:27)
+Version 1.0.308.002: Library build (2014/02/15 at 00:45:38)
+Version 1.0.307.002: Library build (2014/02/15 at 00:02:00)
+Version 1.0.306.001: Library build (2014/02/15 at 00:01:46)
+Version 1.0.305.001: Library build (2014/02/15 at 00:01:00)
+Version 1.0.303.2336: Library build (2014/02/14 at 23:36:25)
+Version 1.0.290.2202: 
+Version 1.0.289.2132: 
+Version 1.0.288.253: 
+Version 1.0.287.252: 
+Version 1.0.286.2341: 
+Version 1.0.285.2341: 
+Version 1.0.284.2338: 
+Version 1.0.283.2337: 
+Version 1.0.282.2314: 
+Version 1.0.254.1723: Added double linked list, got rid of horrible 42 \
+	list struct
+Version 1.0.253.357: Added ft_getline
+Version 1.0.252.315: Added ft_memdup
+Version 1.0.221.1604: Fixed lots of norming errors
+Version 1.0.211.855: Added width format specifier for printf
+Version 1.0.186.952: Totally rewritten execution process, working in
+	root-owned executables
+Version 1.0.171.741: Still modifying...
+Version 1.0.170.736: Doing small changes to filesystem
+Version 1.0.162.1018: Added debug macros for linked lists
+Version 1.0.126.622: Added library functions to deal with version informations
+	ft_version_{major|minor|build|rev}
+Version 1.0.123.557: Finally polished changelog + versionning infos
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:16:35[00m][166Dllsl  ggit staths  us
+# On branch test
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   .changelog
+#	modified:   .version
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	libft.a
+#	libft_d.a
+#	obj/debug/ft_atoi.o
+#	obj/debug/ft_atol.o
+#	obj/debug/ft_bzero.o
+#	obj/debug/ft_dlist_add_back.o
+#	obj/debug/ft_dlist_add_front.o
+#	obj/debug/ft_dlist_clear.o
+#	obj/debug/ft_dlist_copy.o
+#	obj/debug/ft_dlist_destroy.o
+#	obj/debug/ft_dlist_dup.o
+#	obj/debug/ft_dlist_init.o
+#	obj/debug/ft_dlist_node.o
+#	obj/debug/ft_dlist_remove.o
+#	obj/debug/ft_error.o
+#	obj/debug/ft_file.o
+#	obj/debug/ft_file_access.o
+#	obj/debug/ft_fprintf.o
+#	obj/debug/ft_ftoa.o
+#	obj/debug/ft_getline.o
+#	obj/debug/ft_isalnum.o
+#	obj/debug/ft_isalpha.o
+#	obj/debug/ft_isanyof.o
+#	obj/debug/ft_isascii.o
+#	obj/debug/ft_isdigit.o
+#	obj/debug/ft_isempty.o
+#	obj/debug/ft_islower.o
+#	obj/debug/ft_isprint.o
+#	obj/debug/ft_isspace.o
+#	obj/debug/ft_isupper.o
+#	obj/debug/ft_itoa.o
+#	obj/debug/ft_lstadd.o
+#	obj/debug/ft_lstback.o
+#	obj/debug/ft_lstdel.o
+#	obj/debug/ft_lstdelone.o
+#	obj/debug/ft_lsteq.o
+#	obj/debug/ft_lstfront.o
+#	obj/debug/ft_lstiter.o
+#	obj/debug/ft_lstlast.o
+#	obj/debug/ft_lstmap.o
+#	obj/debug/ft_lstneq.o
+#	obj/debug/ft_lstnew.o
+#	obj/debug/ft_lstpop_back.o
+#	obj/debug/ft_lstpop_front.o
+#	obj/debug/ft_lstpush_back.o
+#	obj/debug/ft_lstpush_front.o
+#	obj/debug/ft_lstsize.o
+#	obj/debug/ft_memalloc.o
+#	obj/debug/ft_memccpy.o
+#	obj/debug/ft_memchr.o
+#	obj/debug/ft_memcmp.o
+#	obj/debug/ft_memcpy.o
+#	obj/debug/ft_memdel.o
+#	obj/debug/ft_memdup.o
+#	obj/debug/ft_memmove.o
+#	obj/debug/ft_memrealloc.o
+#	obj/debug/ft_memset.o
+#	obj/debug/ft_ntoa.o
+#	obj/debug/ft_number_length.o
+#	obj/debug/ft_opendir.o
+#	obj/debug/ft_parse_printf_char.o
+#	obj/debug/ft_printf.o
+#	obj/debug/ft_printf_do_bool.o
+#	obj/debug/ft_printf_do_char.o
+#	obj/debug/ft_printf_do_int.o
+#	obj/debug/ft_printf_do_numbers.o
+#	obj/debug/ft_printf_do_pointers.o
+#	obj/debug/ft_printf_do_string.o
+#	obj/debug/ft_printf_parse_width.o
+#	obj/debug/ft_putchar.o
+#	obj/debug/ft_putchar_fd.o
+#	obj/debug/ft_putendl.o
+#	obj/debug/ft_putendl_fd.o
+#	obj/debug/ft_putnbr.o
+#	obj/debug/ft_putnbr_fd.o
+#	obj/debug/ft_putstr.o
+#	obj/debug/ft_putstr_fd.o
+#	obj/debug/ft_readdir.o
+#	obj/debug/ft_realloc.o
+#	obj/debug/ft_search_file.o
+#	obj/debug/ft_strcat.o
+#	obj/debug/ft_strchr.o
+#	obj/debug/ft_strclr.o
+#	obj/debug/ft_strcmp.o
+#	obj/debug/ft_strcpy.o
+#	obj/debug/ft_strdel.o
+#	obj/debug/ft_strdup.o
+#	obj/debug/ft_strempty.o
+#	obj/debug/ft_strequ.o
+#	obj/debug/ft_strfind.o
+#	obj/debug/ft_striter.o
+#	obj/debug/ft_striteri.o
+#	obj/debug/ft_strjoin.o
+#	obj/debug/ft_strlcat.o
+#	obj/debug/ft_strlen.o
+#	obj/debug/ft_strmap.o
+#	obj/debug/ft_strmapi.o
+#	obj/debug/ft_strmatch.o
+#	obj/debug/ft_strncat.o
+#	obj/debug/ft_strncmp.o
+#	obj/debug/ft_strncpy.o
+#	obj/debug/ft_strndup.o
+#	obj/debug/ft_strnequ.o
+#	obj/debug/ft_strnew.o
+#	obj/debug/ft_strnstr.o
+#	obj/debug/ft_strrchr.o
+#	obj/debug/ft_strrev.o
+#	obj/debug/ft_strsplit.o
+#	obj/debug/ft_strstr.o
+#	obj/debug/ft_strsub.o
+#	obj/debug/ft_strtok.o
+#	obj/debug/ft_strtolower.o
+#	obj/debug/ft_strtoupper.o
+#	obj/debug/ft_strtrim.o
+#	obj/debug/ft_swap.o
+#	obj/debug/ft_tokdel.o
+#	obj/debug/ft_tolower.o
+#	obj/debug/ft_toupper.o
+#	obj/debug/ft_version.o
+#	obj/debug/ft_vfprintf.o
+#	obj/debug/ft_vprintf.o
+#	obj/debug/ft_vsnprintf.o
+#	obj/debug/ft_vsnprintf_char.o
+#	obj/debug/ft_vsnprintf_float.o
+#	obj/debug/ft_vsnprintf_hexa.o
+#	obj/debug/ft_vsnprintf_loop.o
+#	obj/debug/ft_vsnprintf_signed.o
+#	obj/debug/ft_vsnprintf_step.o
+#	obj/debug/ft_vsnprintf_string.o
+#	obj/debug/ft_vsnprintf_unsigned.o
+#	obj/release/ft_atoi.o
+#	obj/release/ft_atol.o
+#	obj/release/ft_bzero.o
+#	obj/release/ft_dlist_add_back.o
+#	obj/release/ft_dlist_add_front.o
+#	obj/release/ft_dlist_clear.o
+#	obj/release/ft_dlist_copy.o
+#	obj/release/ft_dlist_destroy.o
+#	obj/release/ft_dlist_dup.o
+#	obj/release/ft_dlist_init.o
+#	obj/release/ft_dlist_node.o
+#	obj/release/ft_dlist_remove.o
+#	obj/release/ft_error.o
+#	obj/release/ft_file.o
+#	obj/release/ft_file_access.o
+#	obj/release/ft_fprintf.o
+#	obj/release/ft_ftoa.o
+#	obj/release/ft_getline.o
+#	obj/release/ft_isalnum.o
+#	obj/release/ft_isalpha.o
+#	obj/release/ft_isanyof.o
+#	obj/release/ft_isascii.o
+#	obj/release/ft_isdigit.o
+#	obj/release/ft_isempty.o
+#	obj/release/ft_islower.o
+#	obj/release/ft_isprint.o
+#	obj/release/ft_isspace.o
+#	obj/release/ft_isupper.o
+#	obj/release/ft_itoa.o
+#	obj/release/ft_lstadd.o
+#	obj/release/ft_lstback.o
+#	obj/release/ft_lstdel.o
+#	obj/release/ft_lstdelone.o
+#	obj/release/ft_lsteq.o
+#	obj/release/ft_lstfront.o
+#	obj/release/ft_lstiter.o
+#	obj/release/ft_lstlast.o
+#	obj/release/ft_lstmap.o
+#	obj/release/ft_lstneq.o
+#	obj/release/ft_lstnew.o
+#	obj/release/ft_lstpop_back.o
+#	obj/release/ft_lstpop_front.o
+#	obj/release/ft_lstpush_back.o
+#	obj/release/ft_lstpush_front.o
+#	obj/release/ft_lstsize.o
+#	obj/release/ft_memalloc.o
+#	obj/release/ft_memccpy.o
+#	obj/release/ft_memchr.o
+#	obj/release/ft_memcmp.o
+#	obj/release/ft_memcpy.o
+#	obj/release/ft_memdel.o
+#	obj/release/ft_memdup.o
+#	obj/release/ft_memmove.o
+#	obj/release/ft_memrealloc.o
+#	obj/release/ft_memset.o
+#	obj/release/ft_ntoa.o
+#	obj/release/ft_number_length.o
+#	obj/release/ft_opendir.o
+#	obj/release/ft_parse_printf_char.o
+#	obj/release/ft_printf.o
+#	obj/release/ft_printf_do_bool.o
+#	obj/release/ft_printf_do_char.o
+#	obj/release/ft_printf_do_int.o
+#	obj/release/ft_printf_do_numbers.o
+#	obj/release/ft_printf_do_pointers.o
+#	obj/release/ft_printf_do_string.o
+#	obj/release/ft_printf_parse_width.o
+#	obj/release/ft_putchar.o
+#	obj/release/ft_putchar_fd.o
+#	obj/release/ft_putendl.o
+#	obj/release/ft_putendl_fd.o
+#	obj/release/ft_putnbr.o
+#	obj/release/ft_putnbr_fd.o
+#	obj/release/ft_putstr.o
+#	obj/release/ft_putstr_fd.o
+#	obj/release/ft_readdir.o
+#	obj/release/ft_realloc.o
+#	obj/release/ft_search_file.o
+#	obj/release/ft_strcat.o
+#	obj/release/ft_strchr.o
+#	obj/release/ft_strclr.o
+#	obj/release/ft_strcmp.o
+#	obj/release/ft_strcpy.o
+#	obj/release/ft_strdel.o
+#	obj/release/ft_strdup.o
+#	obj/release/ft_strempty.o
+#	obj/release/ft_strequ.o
+#	obj/release/ft_strfind.o
+#	obj/release/ft_striter.o
+#	obj/release/ft_striteri.o
+#	obj/release/ft_strjoin.o
+#	obj/release/ft_strlcat.o
+#	obj/release/ft_strlen.o
+#	obj/release/ft_strmap.o
+#	obj/release/ft_strmapi.o
+#	obj/release/ft_strmatch.o
+#	obj/release/ft_strncat.o
+#	obj/release/ft_strncmp.o
+#	obj/release/ft_strncpy.o
+#	obj/release/ft_strndup.o
+#	obj/release/ft_strnequ.o
+#	obj/release/ft_strnew.o
+#	obj/release/ft_strnstr.o
+#	obj/release/ft_strrchr.o
+#	obj/release/ft_strrev.o
+#	obj/release/ft_strsplit.o
+#	obj/release/ft_strstr.o
+#	obj/release/ft_strsub.o
+#	obj/release/ft_strtok.o
+#	obj/release/ft_strtolower.o
+#	obj/release/ft_strtoupper.o
+#	obj/release/ft_strtrim.o
+#	obj/release/ft_swap.o
+#	obj/release/ft_tokdel.o
+#	obj/release/ft_tolower.o
+#	obj/release/ft_toupper.o
+#	obj/release/ft_version.o
+#	obj/release/ft_vfprintf.o
+#	obj/release/ft_vprintf.o
+#	obj/release/ft_vsnprintf.o
+#	obj/release/ft_vsnprintf_char.o
+#	obj/release/ft_vsnprintf_float.o
+#	obj/release/ft_vsnprintf_hexa.o
+#	obj/release/ft_vsnprintf_loop.o
+#	obj/release/ft_vsnprintf_signed.o
+#	obj/release/ft_vsnprintf_step.o
+#	obj/release/ft_vsnprintf_string.o
+#	obj/release/ft_vsnprintf_unsigned.o
+no changes added to commit (use "git add" and/or "git commit -a")
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:18:04[00m][166Dmmake fcl     m  ccat .giti[1m [0m[0m 
+gitdir: ../.git/modules/libft
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:18:09[00m][166Dccat .gitignore
+cat: .gitignore: No such file or directory
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:18:14[00m][166Deem .giti     e  e ggit branch
+  dev
+  master
+* test
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:18:20[00m][166Dggit branch dev          g  ggit p  g  ggit add .
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:18:35[00m][166Dggtg git commit -am "Update"
+[test 6caeb3a] Update
+ 260 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 libft.a
+ create mode 100644 libft_d.a
+ create mode 100644 obj/debug/ft_atoi.o
+ create mode 100644 obj/debug/ft_atol.o
+ create mode 100644 obj/debug/ft_bzero.o
+ create mode 100644 obj/debug/ft_dlist_add_back.o
+ create mode 100644 obj/debug/ft_dlist_add_front.o
+ create mode 100644 obj/debug/ft_dlist_clear.o
+ create mode 100644 obj/debug/ft_dlist_copy.o
+ create mode 100644 obj/debug/ft_dlist_destroy.o
+ create mode 100644 obj/debug/ft_dlist_dup.o
+ create mode 100644 obj/debug/ft_dlist_init.o
+ create mode 100644 obj/debug/ft_dlist_node.o
+ create mode 100644 obj/debug/ft_dlist_remove.o
+ create mode 100644 obj/debug/ft_error.o
+ create mode 100644 obj/debug/ft_file.o
+ create mode 100644 obj/debug/ft_file_access.o
+ create mode 100644 obj/debug/ft_fprintf.o
+ create mode 100644 obj/debug/ft_ftoa.o
+ create mode 100644 obj/debug/ft_getline.o
+ create mode 100644 obj/debug/ft_isalnum.o
+ create mode 100644 obj/debug/ft_isalpha.o
+ create mode 100644 obj/debug/ft_isanyof.o
+ create mode 100644 obj/debug/ft_isascii.o
+ create mode 100644 obj/debug/ft_isdigit.o
+ create mode 100644 obj/debug/ft_isempty.o
+ create mode 100644 obj/debug/ft_islower.o
+ create mode 100644 obj/debug/ft_isprint.o
+ create mode 100644 obj/debug/ft_isspace.o
+ create mode 100644 obj/debug/ft_isupper.o
+ create mode 100644 obj/debug/ft_itoa.o
+ create mode 100644 obj/debug/ft_lstadd.o
+ create mode 100644 obj/debug/ft_lstback.o
+ create mode 100644 obj/debug/ft_lstdel.o
+ create mode 100644 obj/debug/ft_lstdelone.o
+ create mode 100644 obj/debug/ft_lsteq.o
+ create mode 100644 obj/debug/ft_lstfront.o
+ create mode 100644 obj/debug/ft_lstiter.o
+ create mode 100644 obj/debug/ft_lstlast.o
+ create mode 100644 obj/debug/ft_lstmap.o
+ create mode 100644 obj/debug/ft_lstneq.o
+ create mode 100644 obj/debug/ft_lstnew.o
+ create mode 100644 obj/debug/ft_lstpop_back.o
+ create mode 100644 obj/debug/ft_lstpop_front.o
+ create mode 100644 obj/debug/ft_lstpush_back.o
+ create mode 100644 obj/debug/ft_lstpush_front.o
+ create mode 100644 obj/debug/ft_lstsize.o
+ create mode 100644 obj/debug/ft_memalloc.o
+ create mode 100644 obj/debug/ft_memccpy.o
+ create mode 100644 obj/debug/ft_memchr.o
+ create mode 100644 obj/debug/ft_memcmp.o
+ create mode 100644 obj/debug/ft_memcpy.o
+ create mode 100644 obj/debug/ft_memdel.o
+ create mode 100644 obj/debug/ft_memdup.o
+ create mode 100644 obj/debug/ft_memmove.o
+ create mode 100644 obj/debug/ft_memrealloc.o
+ create mode 100644 obj/debug/ft_memset.o
+ create mode 100644 obj/debug/ft_ntoa.o
+ create mode 100644 obj/debug/ft_number_length.o
+ create mode 100644 obj/debug/ft_opendir.o
+ create mode 100644 obj/debug/ft_parse_printf_char.o
+ create mode 100644 obj/debug/ft_printf.o
+ create mode 100644 obj/debug/ft_printf_do_bool.o
+ create mode 100644 obj/debug/ft_printf_do_char.o
+ create mode 100644 obj/debug/ft_printf_do_int.o
+ create mode 100644 obj/debug/ft_printf_do_numbers.o
+ create mode 100644 obj/debug/ft_printf_do_pointers.o
+ create mode 100644 obj/debug/ft_printf_do_string.o
+ create mode 100644 obj/debug/ft_printf_parse_width.o
+ create mode 100644 obj/debug/ft_putchar.o
+ create mode 100644 obj/debug/ft_putchar_fd.o
+ create mode 100644 obj/debug/ft_putendl.o
+ create mode 100644 obj/debug/ft_putendl_fd.o
+ create mode 100644 obj/debug/ft_putnbr.o
+ create mode 100644 obj/debug/ft_putnbr_fd.o
+ create mode 100644 obj/debug/ft_putstr.o
+ create mode 100644 obj/debug/ft_putstr_fd.o
+ create mode 100644 obj/debug/ft_readdir.o
+ create mode 100644 obj/debug/ft_realloc.o
+ create mode 100644 obj/debug/ft_search_file.o
+ create mode 100644 obj/debug/ft_strcat.o
+ create mode 100644 obj/debug/ft_strchr.o
+ create mode 100644 obj/debug/ft_strclr.o
+ create mode 100644 obj/debug/ft_strcmp.o
+ create mode 100644 obj/debug/ft_strcpy.o
+ create mode 100644 obj/debug/ft_strdel.o
+ create mode 100644 obj/debug/ft_strdup.o
+ create mode 100644 obj/debug/ft_strempty.o
+ create mode 100644 obj/debug/ft_strequ.o
+ create mode 100644 obj/debug/ft_strfind.o
+ create mode 100644 obj/debug/ft_striter.o
+ create mode 100644 obj/debug/ft_striteri.o
+ create mode 100644 obj/debug/ft_strjoin.o
+ create mode 100644 obj/debug/ft_strlcat.o
+ create mode 100644 obj/debug/ft_strlen.o
+ create mode 100644 obj/debug/ft_strmap.o
+ create mode 100644 obj/debug/ft_strmapi.o
+ create mode 100644 obj/debug/ft_strmatch.o
+ create mode 100644 obj/debug/ft_strncat.o
+ create mode 100644 obj/debug/ft_strncmp.o
+ create mode 100644 obj/debug/ft_strncpy.o
+ create mode 100644 obj/debug/ft_strndup.o
+ create mode 100644 obj/debug/ft_strnequ.o
+ create mode 100644 obj/debug/ft_strnew.o
+ create mode 100644 obj/debug/ft_strnstr.o
+ create mode 100644 obj/debug/ft_strrchr.o
+ create mode 100644 obj/debug/ft_strrev.o
+ create mode 100644 obj/debug/ft_strsplit.o
+ create mode 100644 obj/debug/ft_strstr.o
+ create mode 100644 obj/debug/ft_strsub.o
+ create mode 100644 obj/debug/ft_strtok.o
+ create mode 100644 obj/debug/ft_strtolower.o
+ create mode 100644 obj/debug/ft_strtoupper.o
+ create mode 100644 obj/debug/ft_strtrim.o
+ create mode 100644 obj/debug/ft_swap.o
+ create mode 100644 obj/debug/ft_tokdel.o
+ create mode 100644 obj/debug/ft_tolower.o
+ create mode 100644 obj/debug/ft_toupper.o
+ create mode 100644 obj/debug/ft_version.o
+ create mode 100644 obj/debug/ft_vfprintf.o
+ create mode 100644 obj/debug/ft_vprintf.o
+ create mode 100644 obj/debug/ft_vsnprintf.o
+ create mode 100644 obj/debug/ft_vsnprintf_char.o
+ create mode 100644 obj/debug/ft_vsnprintf_float.o
+ create mode 100644 obj/debug/ft_vsnprintf_hexa.o
+ create mode 100644 obj/debug/ft_vsnprintf_loop.o
+ create mode 100644 obj/debug/ft_vsnprintf_signed.o
+ create mode 100644 obj/debug/ft_vsnprintf_step.o
+ create mode 100644 obj/debug/ft_vsnprintf_string.o
+ create mode 100644 obj/debug/ft_vsnprintf_unsigned.o
+ create mode 100644 obj/release/ft_atoi.o
+ create mode 100644 obj/release/ft_atol.o
+ create mode 100644 obj/release/ft_bzero.o
+ create mode 100644 obj/release/ft_dlist_add_back.o
+ create mode 100644 obj/release/ft_dlist_add_front.o
+ create mode 100644 obj/release/ft_dlist_clear.o
+ create mode 100644 obj/release/ft_dlist_copy.o
+ create mode 100644 obj/release/ft_dlist_destroy.o
+ create mode 100644 obj/release/ft_dlist_dup.o
+ create mode 100644 obj/release/ft_dlist_init.o
+ create mode 100644 obj/release/ft_dlist_node.o
+ create mode 100644 obj/release/ft_dlist_remove.o
+ create mode 100644 obj/release/ft_error.o
+ create mode 100644 obj/release/ft_file.o
+ create mode 100644 obj/release/ft_file_access.o
+ create mode 100644 obj/release/ft_fprintf.o
+ create mode 100644 obj/release/ft_ftoa.o
+ create mode 100644 obj/release/ft_getline.o
+ create mode 100644 obj/release/ft_isalnum.o
+ create mode 100644 obj/release/ft_isalpha.o
+ create mode 100644 obj/release/ft_isanyof.o
+ create mode 100644 obj/release/ft_isascii.o
+ create mode 100644 obj/release/ft_isdigit.o
+ create mode 100644 obj/release/ft_isempty.o
+ create mode 100644 obj/release/ft_islower.o
+ create mode 100644 obj/release/ft_isprint.o
+ create mode 100644 obj/release/ft_isspace.o
+ create mode 100644 obj/release/ft_isupper.o
+ create mode 100644 obj/release/ft_itoa.o
+ create mode 100644 obj/release/ft_lstadd.o
+ create mode 100644 obj/release/ft_lstback.o
+ create mode 100644 obj/release/ft_lstdel.o
+ create mode 100644 obj/release/ft_lstdelone.o
+ create mode 100644 obj/release/ft_lsteq.o
+ create mode 100644 obj/release/ft_lstfront.o
+ create mode 100644 obj/release/ft_lstiter.o
+ create mode 100644 obj/release/ft_lstlast.o
+ create mode 100644 obj/release/ft_lstmap.o
+ create mode 100644 obj/release/ft_lstneq.o
+ create mode 100644 obj/release/ft_lstnew.o
+ create mode 100644 obj/release/ft_lstpop_back.o
+ create mode 100644 obj/release/ft_lstpop_front.o
+ create mode 100644 obj/release/ft_lstpush_back.o
+ create mode 100644 obj/release/ft_lstpush_front.o
+ create mode 100644 obj/release/ft_lstsize.o
+ create mode 100644 obj/release/ft_memalloc.o
+ create mode 100644 obj/release/ft_memccpy.o
+ create mode 100644 obj/release/ft_memchr.o
+ create mode 100644 obj/release/ft_memcmp.o
+ create mode 100644 obj/release/ft_memcpy.o
+ create mode 100644 obj/release/ft_memdel.o
+ create mode 100644 obj/release/ft_memdup.o
+ create mode 100644 obj/release/ft_memmove.o
+ create mode 100644 obj/release/ft_memrealloc.o
+ create mode 100644 obj/release/ft_memset.o
+ create mode 100644 obj/release/ft_ntoa.o
+ create mode 100644 obj/release/ft_number_length.o
+ create mode 100644 obj/release/ft_opendir.o
+ create mode 100644 obj/release/ft_parse_printf_char.o
+ create mode 100644 obj/release/ft_printf.o
+ create mode 100644 obj/release/ft_printf_do_bool.o
+ create mode 100644 obj/release/ft_printf_do_char.o
+ create mode 100644 obj/release/ft_printf_do_int.o
+ create mode 100644 obj/release/ft_printf_do_numbers.o
+ create mode 100644 obj/release/ft_printf_do_pointers.o
+ create mode 100644 obj/release/ft_printf_do_string.o
+ create mode 100644 obj/release/ft_printf_parse_width.o
+ create mode 100644 obj/release/ft_putchar.o
+ create mode 100644 obj/release/ft_putchar_fd.o
+ create mode 100644 obj/release/ft_putendl.o
+ create mode 100644 obj/release/ft_putendl_fd.o
+ create mode 100644 obj/release/ft_putnbr.o
+ create mode 100644 obj/release/ft_putnbr_fd.o
+ create mode 100644 obj/release/ft_putstr.o
+ create mode 100644 obj/release/ft_putstr_fd.o
+ create mode 100644 obj/release/ft_readdir.o
+ create mode 100644 obj/release/ft_realloc.o
+ create mode 100644 obj/release/ft_search_file.o
+ create mode 100644 obj/release/ft_strcat.o
+ create mode 100644 obj/release/ft_strchr.o
+ create mode 100644 obj/release/ft_strclr.o
+ create mode 100644 obj/release/ft_strcmp.o
+ create mode 100644 obj/release/ft_strcpy.o
+ create mode 100644 obj/release/ft_strdel.o
+ create mode 100644 obj/release/ft_strdup.o
+ create mode 100644 obj/release/ft_strempty.o
+ create mode 100644 obj/release/ft_strequ.o
+ create mode 100644 obj/release/ft_strfind.o
+ create mode 100644 obj/release/ft_striter.o
+ create mode 100644 obj/release/ft_striteri.o
+ create mode 100644 obj/release/ft_strjoin.o
+ create mode 100644 obj/release/ft_strlcat.o
+ create mode 100644 obj/release/ft_strlen.o
+ create mode 100644 obj/release/ft_strmap.o
+ create mode 100644 obj/release/ft_strmapi.o
+ create mode 100644 obj/release/ft_strmatch.o
+ create mode 100644 obj/release/ft_strncat.o
+ create mode 100644 obj/release/ft_strncmp.o
+ create mode 100644 obj/release/ft_strncpy.o
+ create mode 100644 obj/release/ft_strndup.o
+ create mode 100644 obj/release/ft_strnequ.o
+ create mode 100644 obj/release/ft_strnew.o
+ create mode 100644 obj/release/ft_strnstr.o
+ create mode 100644 obj/release/ft_strrchr.o
+ create mode 100644 obj/release/ft_strrev.o
+ create mode 100644 obj/release/ft_strsplit.o
+ create mode 100644 obj/release/ft_strstr.o
+ create mode 100644 obj/release/ft_strsub.o
+ create mode 100644 obj/release/ft_strtok.o
+ create mode 100644 obj/release/ft_strtolower.o
+ create mode 100644 obj/release/ft_strtoupper.o
+ create mode 100644 obj/release/ft_strtrim.o
+ create mode 100644 obj/release/ft_swap.o
+ create mode 100644 obj/release/ft_tokdel.o
+ create mode 100644 obj/release/ft_tolower.o
+ create mode 100644 obj/release/ft_toupper.o
+ create mode 100644 obj/release/ft_version.o
+ create mode 100644 obj/release/ft_vfprintf.o
+ create mode 100644 obj/release/ft_vprintf.o
+ create mode 100644 obj/release/ft_vsnprintf.o
+ create mode 100644 obj/release/ft_vsnprintf_char.o
+ create mode 100644 obj/release/ft_vsnprintf_float.o
+ create mode 100644 obj/release/ft_vsnprintf_hexa.o
+ create mode 100644 obj/release/ft_vsnprintf_loop.o
+ create mode 100644 obj/release/ft_vsnprintf_signed.o
+ create mode 100644 obj/release/ft_vsnprintf_step.o
+ create mode 100644 obj/release/ft_vsnprintf_string.o
+ create mode 100644 obj/release/ft_vsnprintf_unsigned.o
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:18:42[00m][166Dggit push
+Counting objects: 270, done.
+Delta compression using up to 2 threads.
+Compressing objects:   0% (1/264)   Compressing objects:   1% (3/264)   Compressing objects:   2% (6/264)   Compressing objects:   3% (8/264)   Compressing objects:   4% (11/264)   Compressing objects:   5% (14/264)   Compressing objects:   6% (16/264)   Compressing objects:   7% (19/264)   Compressing objects:   8% (22/264)   Compressing objects:   9% (24/264)   Compressing objects:  10% (27/264)   Compressing objects:  11% (30/264)   Compressing objects:  12% (32/264)   Compressing objects:  13% (35/264)   Compressing objects:  14% (37/264)   Compressing objects:  15% (40/264)   Compressing objects:  16% (43/264)   Compressing objects:  17% (45/264)   Compressing objects:  18% (48/264)   Compressing objects:  19% (51/264)   Compressing objects:  20% (53/264)   Compressing objects:  21% (56/264)   Compressing objects:  22% (59/264)   Compressing objects:  23% (61/264)   Compressing objects:  24% (64/264)   Compressing objects:  25% (66/264)   Compressing objects:  26% (69/264)   Compressing objects:  27% (72/264)   Compressing objects:  28% (74/264)   Compressing objects:  29% (77/264)   Compressing objects:  30% (80/264)   Compressing objects:  31% (82/264)   Compressing objects:  32% (85/264)   Compressing objects:  33% (88/264)   Compressing objects:  34% (90/264)   Compressing objects:  35% (93/264)   Compressing objects:  36% (96/264)   Compressing objects:  37% (98/264)   Compressing objects:  38% (101/264)   Compressing objects:  39% (103/264)   Compressing objects:  40% (106/264)   Compressing objects:  41% (109/264)   Compressing objects:  42% (111/264)   Compressing objects:  43% (114/264)   Compressing objects:  44% (117/264)   Compressing objects:  45% (119/264)   Compressing objects:  46% (122/264)   Compressing objects:  47% (125/264)   Compressing objects:  48% (127/264)   Compressing objects:  49% (130/264)   Compressing objects:  50% (132/264)   Compressing objects:  51% (135/264)   Compressing objects:  52% (138/264)   Compressing objects:  53% (140/264)   Compressing objects:  54% (143/264)   Compressing objects:  55% (146/264)   Compressing objects:  56% (148/264)   Compressing objects:  57% (151/264)   Compressing objects:  58% (154/264)   Compressing objects:  59% (156/264)   Compressing objects:  60% (159/264)   Compressing objects:  61% (162/264)   Compressing objects:  62% (164/264)   Compressing objects:  63% (167/264)   Compressing objects:  64% (169/264)   Compressing objects:  65% (172/264)   Compressing objects:  66% (175/264)   Compressing objects:  67% (177/264)   Compressing objects:  68% (180/264)   Compressing objects:  69% (183/264)   Compressing objects:  70% (185/264)   Compressing objects:  71% (188/264)   Compressing objects:  72% (191/264)   Compressing objects:  73% (193/264)   Compressing objects:  74% (196/264)   Compressing objects:  75% (198/264)   Compressing objects:  76% (201/264)   Compressing objects:  77% (204/264)   Compressing objects:  78% (206/264)   Compressing objects:  79% (209/264)   Compressing objects:  80% (212/264)   Compressing objects:  81% (214/264)   Compressing objects:  82% (217/264)   Compressing objects:  83% (220/264)   Compressing objects:  84% (222/264)   Compressing objects:  85% (225/264)   Compressing objects:  86% (228/264)   Compressing objects:  87% (230/264)   Compressing objects:  88% (233/264)   Compressing objects:  89% (235/264)   Compressing objects:  90% (238/264)   Compressing objects:  91% (241/264)   Compressing objects:  92% (243/264)   Compressing objects:  93% (246/264)   Compressing objects:  94% (249/264)   Compressing objects:  95% (251/264)   Compressing objects:  96% (254/264)   Compressing objects:  97% (257/264)   Compressing objects:  98% (259/264)   Compressing objects:  99% (262/264)   Compressing objects: 100% (264/264)   Compressing objects: 100% (264/264), done.
+Writing objects:   0% (1/265)   Writing objects:   1% (3/265)   Writing objects:   2% (6/265)   Writing objects:   3% (8/265)   Writing objects:   5% (15/265)   Writing objects:   6% (18/265)   Writing objects:  10% (28/265)   Writing objects:  12% (32/265)   Writing objects:  13% (37/265)   Writing objects:  14% (38/265)   Writing objects:  15% (40/265)   Writing objects:  16% (43/265)   Writing objects:  17% (46/265)   Writing objects:  18% (48/265)   Writing objects:  19% (52/265)   Writing objects:  20% (53/265)   Writing objects:  22% (59/265)   Writing objects:  23% (61/265)   Writing objects:  24% (64/265)   Writing objects:  25% (67/265)   Writing objects:  26% (69/265)   Writing objects:  27% (72/265)   Writing objects:  28% (75/265)   Writing objects:  30% (81/265)   Writing objects:  31% (83/265)   Writing objects:  32% (85/265)   Writing objects:  33% (88/265)   Writing objects:  34% (92/265)   Writing objects:  35% (93/265)   Writing objects:  36% (96/265)   Writing objects:  37% (99/265)   Writing objects:  38% (101/265)   Writing objects:  39% (104/265)   Writing objects:  40% (106/265)   Writing objects:  41% (109/265)   Writing objects:  42% (113/265)   Writing objects:  43% (114/265)   Writing objects:  44% (117/265)   Writing objects:  45% (120/265)   Writing objects:  46% (122/265)   Writing objects:  47% (125/265)   Writing objects:  48% (128/265)   Writing objects:  49% (130/265)   Writing objects:  50% (133/265)   Writing objects:  51% (136/265)   Writing objects:  52% (138/265)   Writing objects:  53% (142/265)   Writing objects:  54% (144/265)   Writing objects:  55% (146/265)   Writing objects:  56% (149/265)   Writing objects:  57% (153/265)   Writing objects:  58% (154/265)   Writing objects:  59% (157/265)   Writing objects:  60% (159/265)   Writing objects:  61% (162/265)   Writing objects:  62% (165/265)   Writing objects:  63% (167/265)   Writing objects:  64% (170/265)   Writing objects:  65% (173/265)   Writing objects:  66% (177/265)   Writing objects:  67% (178/265)   Writing objects:  68% (182/265)   Writing objects:  69% (183/265)   Writing objects:  70% (186/265)   Writing objects:  71% (189/265)   Writing objects:  72% (191/265)   Writing objects:  73% (194/265)   Writing objects:  74% (197/265)   Writing objects:  75% (199/265)   Writing objects:  76% (202/265)   Writing objects:  77% (205/265)   Writing objects:  78% (207/265)   Writing objects:  79% (210/265)   Writing objects:  80% (212/265)   Writing objects:  81% (215/265)   Writing objects:  83% (220/265)   Writing objects:  84% (223/265)   Writing objects:  85% (226/265)   Writing objects:  86% (228/265)   Writing objects:  87% (231/265)   Writing objects:  88% (234/265)   Writing objects:  89% (236/265)   Writing objects:  90% (239/265)   Writing objects:  91% (242/265)   Writing objects:  92% (244/265)   Writing objects:  93% (247/265)   Writing objects:  94% (250/265)   Writing objects:  95% (252/265)   Writing objects:  96% (255/265)   Writing objects:  97% (258/265)   Writing objects:  98% (260/265)   Writing objects:  99% (263/265)   Writing objects: 100% (265/265)   Writing objects: 100% (265/265), 241.20 KiB, done.
+Total 265 (delta 243), reused 0 (delta 0)
+makeTo dev_darkboss@git.quantum-realm.com:libft
+   4d5b5c0..6caeb3a  test -> test
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:18:49[00m][166Dmmake; [H[J[0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49mmake[K[153C[[33m0:18:49[00m][162D  m  ;;asdfasldf;'adfgs'd;f,g                     ;  llsl  ggit status
+# On branch test
+nothing to commit (working directory clean)
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:19:17[00m][166Dggit ls-files
+.DS_Store
+.changelog
+.version
+Makefile
+Version.mak
+auteur
+inc/libft.h
+inc/libft_config.h
+inc/libft_converters.h
+inc/libft_dlist.h
+inc/libft_file.h
+inc/libft_io.h
+inc/libft_list.h
+inc/libft_memory.h
+inc/libft_platform.h
+inc/libft_printf.h
+inc/libft_string.h
+inc/libft_types.h
+inc/libft_version.h
+libft.a
+libft_d.a
+obj/debug/.placeholder
+obj/debug/ft_atoi.o
+obj/debug/ft_atol.o
+obj/debug/ft_bzero.o
+obj/debug/ft_dlist_add_back.o
+obj/debug/ft_dlist_add_front.o
+obj/debug/ft_dlist_clear.o
+obj/debug/ft_dlist_copy.o
+obj/debug/ft_dlist_destroy.o
+obj/debug/ft_dlist_dup.o
+obj/debug/ft_dlist_init.o
+obj/debug/ft_dlist_node.o
+obj/debug/ft_dlist_remove.o
+obj/debug/ft_error.o
+obj/debug/ft_file.o
+obj/debug/ft_file_access.o
+obj/debug/ft_fprintf.o
+obj/debug/ft_ftoa.o
+obj/debug/ft_getline.o
+obj/debug/ft_isalnum.o
+obj/debug/ft_isalpha.o
+obj/debug/ft_isanyof.o
+obj/debug/ft_isascii.o
+obj/debug/ft_isdigit.o
+obj/debug/ft_isempty.o
+obj/debug/ft_islower.o
+obj/debug/ft_isprint.o
+obj/debug/ft_isspace.o
+obj/debug/ft_isupper.o
+obj/debug/ft_itoa.o
+obj/debug/ft_lstadd.o
+obj/debug/ft_lstback.o
+obj/debug/ft_lstdel.o
+obj/debug/ft_lstdelone.o
+obj/debug/ft_lsteq.o
+obj/debug/ft_lstfront.o
+obj/debug/ft_lstiter.o
+obj/debug/ft_lstlast.o
+obj/debug/ft_lstmap.o
+obj/debug/ft_lstneq.o
+obj/debug/ft_lstnew.o
+obj/debug/ft_lstpop_back.o
+obj/debug/ft_lstpop_front.o
+obj/debug/ft_lstpush_back.o
+obj/debug/ft_lstpush_front.o
+obj/debug/ft_lstsize.o
+obj/debug/ft_memalloc.o
+obj/debug/ft_memccpy.o
+obj/debug/ft_memchr.o
+obj/debug/ft_memcmp.o
+obj/debug/ft_memcpy.o
+obj/debug/ft_memdel.o
+obj/debug/ft_memdup.o
+obj/debug/ft_memmove.o
+obj/debug/ft_memrealloc.o
+obj/debug/ft_memset.o
+obj/debug/ft_ntoa.o
+obj/debug/ft_number_length.o
+obj/debug/ft_opendir.o
+obj/debug/ft_parse_printf_char.o
+obj/debug/ft_printf.o
+obj/debug/ft_printf_do_bool.o
+obj/debug/ft_printf_do_char.o
+obj/debug/ft_printf_do_int.o
+obj/debug/ft_printf_do_numbers.o
+obj/debug/ft_printf_do_pointers.o
+obj/debug/ft_printf_do_string.o
+obj/debug/ft_printf_parse_width.o
+obj/debug/ft_putchar.o
+obj/debug/ft_putchar_fd.o
+obj/debug/ft_putendl.o
+obj/debug/ft_putendl_fd.o
+obj/debug/ft_putnbr.o
+obj/debug/ft_putnbr_fd.o
+obj/debug/ft_putstr.o
+obj/debug/ft_putstr_fd.o
+obj/debug/ft_readdir.o
+obj/debug/ft_realloc.o
+obj/debug/ft_search_file.o
+obj/debug/ft_strcat.o
+obj/debug/ft_strchr.o
+obj/debug/ft_strclr.o
+obj/debug/ft_strcmp.o
+obj/debug/ft_strcpy.o
+obj/debug/ft_strdel.o
+obj/debug/ft_strdup.o
+obj/debug/ft_strempty.o
+obj/debug/ft_strequ.o
+obj/debug/ft_strfind.o
+obj/debug/ft_striter.o
+obj/debug/ft_striteri.o
+obj/debug/ft_strjoin.o
+obj/debug/ft_strlcat.o
+obj/debug/ft_strlen.o
+obj/debug/ft_strmap.o
+obj/debug/ft_strmapi.o
+obj/debug/ft_strmatch.o
+obj/debug/ft_strncat.o
+obj/debug/ft_strncmp.o
+obj/debug/ft_strncpy.o
+obj/debug/ft_strndup.o
+obj/debug/ft_strnequ.o
+obj/debug/ft_strnew.o
+obj/debug/ft_strnstr.o
+obj/debug/ft_strrchr.o
+obj/debug/ft_strrev.o
+obj/debug/ft_strsplit.o
+obj/debug/ft_strstr.o
+obj/debug/ft_strsub.o
+obj/debug/ft_strtok.o
+obj/debug/ft_strtolower.o
+obj/debug/ft_strtoupper.o
+obj/debug/ft_strtrim.o
+obj/debug/ft_swap.o
+obj/debug/ft_tokdel.o
+obj/debug/ft_tolower.o
+obj/debug/ft_toupper.o
+obj/debug/ft_version.o
+obj/debug/ft_vfprintf.o
+obj/debug/ft_vprintf.o
+obj/debug/ft_vsnprintf.o
+obj/debug/ft_vsnprintf_char.o
+obj/debug/ft_vsnprintf_float.o
+obj/debug/ft_vsnprintf_hexa.o
+obj/debug/ft_vsnprintf_loop.o
+obj/debug/ft_vsnprintf_signed.o
+obj/debug/ft_vsnprintf_step.o
+obj/debug/ft_vsnprintf_string.o
+obj/debug/ft_vsnprintf_unsigned.o
+obj/release/.placeholder
+obj/release/ft_atoi.o
+obj/release/ft_atol.o
+obj/release/ft_bzero.o
+obj/release/ft_dlist_add_back.o
+obj/release/ft_dlist_add_front.o
+obj/release/ft_dlist_clear.o
+obj/release/ft_dlist_copy.o
+obj/release/ft_dlist_destroy.o
+obj/release/ft_dlist_dup.o
+obj/release/ft_dlist_init.o
+obj/release/ft_dlist_node.o
+obj/release/ft_dlist_remove.o
+obj/release/ft_error.o
+obj/release/ft_file.o
+obj/release/ft_file_access.o
+obj/release/ft_fprintf.o
+obj/release/ft_ftoa.o
+obj/release/ft_getline.o
+obj/release/ft_isalnum.o
+obj/release/ft_isalpha.o
+obj/release/ft_isanyof.o
+obj/release/ft_isascii.o
+obj/release/ft_isdigit.o
+obj/release/ft_isempty.o
+obj/release/ft_islower.o
+obj/release/ft_isprint.o
+obj/release/ft_isspace.o
+obj/release/ft_isupper.o
+obj/release/ft_itoa.o
+obj/release/ft_lstadd.o
+obj/release/ft_lstback.o
+obj/release/ft_lstdel.o
+obj/release/ft_lstdelone.o
+obj/release/ft_lsteq.o
+obj/release/ft_lstfront.o
+obj/release/ft_lstiter.o
+obj/release/ft_lstlast.o
+obj/release/ft_lstmap.o
+obj/release/ft_lstneq.o
+obj/release/ft_lstnew.o
+obj/release/ft_lstpop_back.o
+obj/release/ft_lstpop_front.o
+obj/release/ft_lstpush_back.o
+obj/release/ft_lstpush_front.o
+obj/release/ft_lstsize.o
+obj/release/ft_memalloc.o
+obj/release/ft_memccpy.o
+obj/release/ft_memchr.o
+obj/release/ft_memcmp.o
+obj/release/ft_memcpy.o
+obj/release/ft_memdel.o
+obj/release/ft_memdup.o
+obj/release/ft_memmove.o
+obj/release/ft_memrealloc.o
+obj/release/ft_memset.o
+obj/release/ft_ntoa.o
+obj/release/ft_number_length.o
+obj/release/ft_opendir.o
+obj/release/ft_parse_printf_char.o
+obj/release/ft_printf.o
+obj/release/ft_printf_do_bool.o
+obj/release/ft_printf_do_char.o
+obj/release/ft_printf_do_int.o
+obj/release/ft_printf_do_numbers.o
+obj/release/ft_printf_do_pointers.o
+obj/release/ft_printf_do_string.o
+obj/release/ft_printf_parse_width.o
+obj/release/ft_putchar.o
+obj/release/ft_putchar_fd.o
+obj/release/ft_putendl.o
+obj/release/ft_putendl_fd.o
+obj/release/ft_putnbr.o
+obj/release/ft_putnbr_fd.o
+obj/release/ft_putstr.o
+obj/release/ft_putstr_fd.o
+obj/release/ft_readdir.o
+obj/release/ft_realloc.o
+obj/release/ft_search_file.o
+obj/release/ft_strcat.o
+obj/release/ft_strchr.o
+obj/release/ft_strclr.o
+obj/release/ft_strcmp.o
+obj/release/ft_strcpy.o
+obj/release/ft_strdel.o
+obj/release/ft_strdup.o
+obj/release/ft_strempty.o
+obj/release/ft_strequ.o
+obj/release/ft_strfind.o
+obj/release/ft_striter.o
+obj/release/ft_striteri.o
+obj/release/ft_strjoin.o
+obj/release/ft_strlcat.o
+obj/release/ft_strlen.o
+obj/release/ft_strmap.o
+obj/release/ft_strmapi.o
+obj/release/ft_strmatch.o
+obj/release/ft_strncat.o
+obj/release/ft_strncmp.o
+obj/release/ft_strncpy.o
+obj/release/ft_strndup.o
+obj/release/ft_strnequ.o
+obj/release/ft_strnew.o
+obj/release/ft_strnstr.o
+obj/release/ft_strrchr.o
+obj/release/ft_strrev.o
+obj/release/ft_strsplit.o
+obj/release/ft_strstr.o
+obj/release/ft_strsub.o
+obj/release/ft_strtok.o
+obj/release/ft_strtolower.o
+obj/release/ft_strtoupper.o
+obj/release/ft_strtrim.o
+obj/release/ft_swap.o
+obj/release/ft_tokdel.o
+obj/release/ft_tolower.o
+obj/release/ft_toupper.o
+obj/release/ft_version.o
+obj/release/ft_vfprintf.o
+obj/release/ft_vprintf.o
+obj/release/ft_vsnprintf.o
+obj/release/ft_vsnprintf_char.o
+obj/release/ft_vsnprintf_float.o
+obj/release/ft_vsnprintf_hexa.o
+obj/release/ft_vsnprintf_loop.o
+obj/release/ft_vsnprintf_signed.o
+obj/release/ft_vsnprintf_step.o
+obj/release/ft_vsnprintf_string.o
+obj/release/ft_vsnprintf_unsigned.o
+src/ft_atoi.c
+src/ft_atol.c
+src/ft_bzero.c
+src/ft_dlist_add_back.c
+src/ft_dlist_add_front.c
+src/ft_dlist_clear.c
+src/ft_dlist_copy.c
+src/ft_dlist_destroy.c
+src/ft_dlist_dup.c
+src/ft_dlist_init.c
+src/ft_dlist_node.c
+src/ft_dlist_remove.c
+src/ft_error.c
+src/ft_file.c
+src/ft_file_access.c
+src/ft_fprintf.c
+src/ft_ftoa.c
+src/ft_getline.c
+src/ft_isalnum.c
+src/ft_isalpha.c
+src/ft_isanyof.c
+src/ft_isascii.c
+src/ft_isdigit.c
+src/ft_isempty.c
+src/ft_islower.c
+src/ft_isprint.c
+src/ft_isspace.c
+src/ft_isupper.c
+src/ft_itoa.c
+src/ft_lstadd.c
+src/ft_lstback.c
+src/ft_lstdel.c
+src/ft_lstdelone.c
+src/ft_lsteq.c
+src/ft_lstfront.c
+src/ft_lstiter.c
+src/ft_lstlast.c
+src/ft_lstmap.c
+src/ft_lstneq.c
+src/ft_lstnew.c
+src/ft_lstpop_back.c
+src/ft_lstpop_front.c
+src/ft_lstpush_back.c
+src/ft_lstpush_front.c
+src/ft_lstsize.c
+src/ft_memalloc.c
+src/ft_memccpy.c
+src/ft_memchr.c
+src/ft_memcmp.c
+src/ft_memcpy.c
+src/ft_memdel.c
+src/ft_memdup.c
+src/ft_memmove.c
+src/ft_memrealloc.c
+src/ft_memset.c
+src/ft_ntoa.c
+src/ft_number_length.c
+src/ft_opendir.c
+src/ft_parse_printf_char.c
+src/ft_printf.c
+src/ft_printf_do_bool.c
+src/ft_printf_do_char.c
+src/ft_printf_do_int.c
+src/ft_printf_do_numbers.c
+src/ft_printf_do_pointers.c
+src/ft_printf_do_string.c
+src/ft_printf_parse_width.c
+src/ft_putchar.c
+src/ft_putchar_fd.c
+src/ft_putendl.c
+src/ft_putendl_fd.c
+src/ft_putnbr.c
+src/ft_putnbr_fd.c
+src/ft_putstr.c
+src/ft_putstr_fd.c
+src/ft_readdir.c
+src/ft_realloc.c
+src/ft_search_file.c
+src/ft_strcat.c
+src/ft_strchr.c
+src/ft_strclr.c
+src/ft_strcmp.c
+src/ft_strcpy.c
+src/ft_strdel.c
+src/ft_strdup.c
+src/ft_strempty.c
+src/ft_strequ.c
+src/ft_strfind.c
+src/ft_striter.c
+src/ft_striteri.c
+src/ft_strjoin.c
+src/ft_strlcat.c
+src/ft_strlen.c
+src/ft_strmap.c
+src/ft_strmapi.c
+src/ft_strmatch.c
+src/ft_strncat.c
+src/ft_strncmp.c
+src/ft_strncpy.c
+src/ft_strndup.c
+src/ft_strnequ.c
+src/ft_strnew.c
+src/ft_strnstr.c
+src/ft_strrchr.c
+src/ft_strrev.c
+src/ft_strsplit.c
+src/ft_strstr.c
+src/ft_strsub.c
+src/ft_strtok.c
+src/ft_strtolower.c
+src/ft_strtoupper.c
+src/ft_strtrim.c
+src/ft_swap.c
+src/ft_tokdel.c
+src/ft_tolower.c
+src/ft_toupper.c
+src/ft_version.c
+src/ft_vfprintf.c
+src/ft_vprintf.c
+src/ft_vsnprintf.c
+src/ft_vsnprintf_char.c
+src/ft_vsnprintf_float.c
+src/ft_vsnprintf_hexa.c
+src/ft_vsnprintf_long.c
+src/ft_vsnprintf_loop.c
+src/ft_vsnprintf_signed.c
+src/ft_vsnprintf_step.c
+src/ft_vsnprintf_string.c
+src/ft_vsnprintf_unsigned.c
+tests/Makefile
+tests/bin/ftoa
+tests/ftoa/Makefile
+tests/ftoa/ftoa
+tests/ftoa/ftoa.c
+tests/ftoa/ftoa.o
+tests/make.sh
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:19:20[00m][166Dggit g  ggit bramch
+git: 'bramch' is not a git command. See 'git --help'.
+
+Did you mean this?
+	branch
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:19:24[00m][166Dggit branch
+  dev
+  master
+* test
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:19:27[00m][166Dggit checkout dev
+Switched to branch 'dev'
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:19:31[00m][166Dggit merge tests
+fatal: tests - not something we can merge
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:19:35[00m][166Dgit merge tests 
+Updating 5ca338f..6caeb3a
+Fast-forward
+ .changelog                          |   21 +++++++++++++++++++++
+ .version                            |    2 +-
+ inc/libft_converters.h              |   29 +++++++++++++++++++++--------
+ libft.a                             |  Bin 0 -> 207194 bytes
+ libft_d.a                           |  Bin 0 -> 509282 bytes
+ obj/debug/ft_atoi.o                 |  Bin 0 -> 3816 bytes
+ obj/debug/ft_atol.o                 |  Bin 0 -> 3408 bytes
+ obj/debug/ft_bzero.o                |  Bin 0 -> 3312 bytes
+ obj/debug/ft_dlist_add_back.o       |  Bin 0 -> 4184 bytes
+ obj/debug/ft_dlist_add_front.o      |  Bin 0 -> 4184 bytes
+ obj/debug/ft_dlist_clear.o          |  Bin 0 -> 4232 bytes
+ obj/debug/ft_dlist_copy.o           |  Bin 0 -> 4216 bytes
+ obj/debug/ft_dlist_destroy.o        |  Bin 0 -> 3968 bytes
+ obj/debug/ft_dlist_dup.o            |  Bin 0 -> 4040 bytes
+ obj/debug/ft_dlist_init.o           |  Bin 0 -> 4000 bytes
+ obj/debug/ft_dlist_node.o           |  Bin 0 -> 4328 bytes
+ obj/debug/ft_dlist_remove.o         |  Bin 0 -> 4400 bytes
+ obj/debug/ft_error.o                |  Bin 0 -> 4000 bytes
+ obj/debug/ft_file.o                 |  Bin 0 -> 7264 bytes
+ obj/debug/ft_file_access.o          |  Bin 0 -> 4416 bytes
+ obj/debug/ft_fprintf.o              |  Bin 0 -> 4016 bytes
+ obj/debug/ft_ftoa.o                 |  Bin 0 -> 6600 bytes
+ obj/debug/ft_getline.o              |  Bin 0 -> 5144 bytes
+ obj/debug/ft_isalnum.o              |  Bin 0 -> 3264 bytes
+ obj/debug/ft_isalpha.o              |  Bin 0 -> 3088 bytes
+ obj/debug/ft_isanyof.o              |  Bin 0 -> 3272 bytes
+ obj/debug/ft_isascii.o              |  Bin 0 -> 3024 bytes
+ obj/debug/ft_isdigit.o              |  Bin 0 -> 3048 bytes
+ obj/debug/ft_isempty.o              |  Bin 0 -> 3408 bytes
+ obj/debug/ft_islower.o              |  Bin 0 -> 3064 bytes
+ obj/debug/ft_isprint.o              |  Bin 0 -> 3048 bytes
+ obj/debug/ft_isspace.o              |  Bin 0 -> 3368 bytes
+ obj/debug/ft_isupper.o              |  Bin 0 -> 3064 bytes
+ obj/debug/ft_itoa.o                 |  Bin 0 -> 4144 bytes
+ obj/debug/ft_lstadd.o               |  Bin 0 -> 3720 bytes
+ obj/debug/ft_lstback.o              |  Bin 0 -> 3456 bytes
+ obj/debug/ft_lstdel.o               |  Bin 0 -> 3984 bytes
+ obj/debug/ft_lstdelone.o            |  Bin 0 -> 4072 bytes
+ obj/debug/ft_lsteq.o                |  Bin 0 -> 3592 bytes
+ obj/debug/ft_lstfront.o             |  Bin 0 -> 3312 bytes
+ obj/debug/ft_lstiter.o              |  Bin 0 -> 3480 bytes
+ obj/debug/ft_lstlast.o              |  Bin 0 -> 3456 bytes
+ obj/debug/ft_lstmap.o               |  Bin 0 -> 4216 bytes
+ obj/debug/ft_lstneq.o               |  Bin 0 -> 3648 bytes
+ obj/debug/ft_lstnew.o               |  Bin 0 -> 3968 bytes
+ obj/debug/ft_lstpop_back.o          |  Bin 0 -> 3824 bytes
+ obj/debug/ft_lstpop_front.o         |  Bin 0 -> 3664 bytes
+ obj/debug/ft_lstpush_back.o         |  Bin 0 -> 3672 bytes
+ obj/debug/ft_lstpush_front.o        |  Bin 0 -> 3400 bytes
+ obj/debug/ft_lstsize.o              |  Bin 0 -> 3456 bytes
+ obj/debug/ft_memalloc.o             |  Bin 0 -> 3464 bytes
+ obj/debug/ft_memccpy.o              |  Bin 0 -> 3512 bytes
+ obj/debug/ft_memchr.o               |  Bin 0 -> 3432 bytes
+ obj/debug/ft_memcmp.o               |  Bin 0 -> 3472 bytes
+ obj/debug/ft_memcpy.o               |  Bin 0 -> 3432 bytes
+ obj/debug/ft_memdel.o               |  Bin 0 -> 3232 bytes
+ obj/debug/ft_memdup.o               |  Bin 0 -> 3512 bytes
+ obj/debug/ft_memmove.o              |  Bin 0 -> 3720 bytes
+ obj/debug/ft_memrealloc.o           |  Bin 0 -> 3664 bytes
+ obj/debug/ft_memset.o               |  Bin 0 -> 3408 bytes
+ obj/debug/ft_ntoa.o                 |  Bin 0 -> 3704 bytes
+ obj/debug/ft_number_length.o        |  Bin 0 -> 3816 bytes
+ obj/debug/ft_opendir.o              |  Bin 0 -> 5784 bytes
+ obj/debug/ft_parse_printf_char.o    |  Bin 0 -> 6376 bytes
+ obj/debug/ft_printf.o               |  Bin 0 -> 4000 bytes
+ obj/debug/ft_printf_do_bool.o       |  Bin 0 -> 4440 bytes
+ obj/debug/ft_printf_do_char.o       |  Bin 0 -> 4264 bytes
+ obj/debug/ft_printf_do_int.o        |  Bin 0 -> 5128 bytes
+ obj/debug/ft_printf_do_numbers.o    |  Bin 0 -> 5232 bytes
+ obj/debug/ft_printf_do_pointers.o   |  Bin 0 -> 4584 bytes
+ obj/debug/ft_printf_do_string.o     |  Bin 0 -> 4504 bytes
+ obj/debug/ft_printf_parse_width.o   |  Bin 0 -> 4032 bytes
+ obj/debug/ft_putchar.o              |  Bin 0 -> 3176 bytes
+ obj/debug/ft_putchar_fd.o           |  Bin 0 -> 3224 bytes
+ obj/debug/ft_putendl.o              |  Bin 0 -> 3488 bytes
+ obj/debug/ft_putendl_fd.o           |  Bin 0 -> 3520 bytes
+ obj/debug/ft_putnbr.o               |  Bin 0 -> 3160 bytes
+ obj/debug/ft_putnbr_fd.o            |  Bin 0 -> 3480 bytes
+ obj/debug/ft_putstr.o               |  Bin 0 -> 3192 bytes
+ obj/debug/ft_putstr_fd.o            |  Bin 0 -> 3608 bytes
+ obj/debug/ft_readdir.o              |  Bin 0 -> 4576 bytes
+ obj/debug/ft_realloc.o              |  Bin 0 -> 3528 bytes
+ obj/debug/ft_search_file.o          |  Bin 0 -> 7336 bytes
+ obj/debug/ft_strcat.o               |  Bin 0 -> 3408 bytes
+ obj/debug/ft_strchr.o               |  Bin 0 -> 3496 bytes
+ obj/debug/ft_strclr.o               |  Bin 0 -> 3104 bytes
+ obj/debug/ft_strcmp.o               |  Bin 0 -> 3280 bytes
+ obj/debug/ft_strcpy.o               |  Bin 0 -> 3320 bytes
+ obj/debug/ft_strdel.o               |  Bin 0 -> 3192 bytes
+ obj/debug/ft_strdup.o               |  Bin 0 -> 3272 bytes
+ obj/debug/ft_strempty.o             |  Bin 0 -> 3328 bytes
+ obj/debug/ft_strequ.o               |  Bin 0 -> 3224 bytes
+ obj/debug/ft_strfind.o              |  Bin 0 -> 3472 bytes
+ obj/debug/ft_striter.o              |  Bin 0 -> 3176 bytes
+ obj/debug/ft_striteri.o             |  Bin 0 -> 3344 bytes
+ obj/debug/ft_strjoin.o              |  Bin 0 -> 3704 bytes
+ obj/debug/ft_strlcat.o              |  Bin 0 -> 3760 bytes
+ obj/debug/ft_strlen.o               |  Bin 0 -> 3288 bytes
+ obj/debug/ft_strmap.o               |  Bin 0 -> 3624 bytes
+ obj/debug/ft_strmapi.o              |  Bin 0 -> 3672 bytes
+ obj/debug/ft_strmatch.o             |  Bin 0 -> 3416 bytes
+ obj/debug/ft_strncat.o              |  Bin 0 -> 3576 bytes
+ obj/debug/ft_strncmp.o              |  Bin 0 -> 3608 bytes
+ obj/debug/ft_strncpy.o              |  Bin 0 -> 3544 bytes
+ obj/debug/ft_strndup.o              |  Bin 0 -> 3728 bytes
+ obj/debug/ft_strnequ.o              |  Bin 0 -> 3296 bytes
+ obj/debug/ft_strnew.o               |  Bin 0 -> 3472 bytes
+ obj/debug/ft_strnstr.o              |  Bin 0 -> 3800 bytes
+ obj/debug/ft_strrchr.o              |  Bin 0 -> 3640 bytes
+ obj/debug/ft_strrev.o               |  Bin 0 -> 3504 bytes
+ obj/debug/ft_strsplit.o             |  Bin 0 -> 5504 bytes
+ obj/debug/ft_strstr.o               |  Bin 0 -> 3696 bytes
+ obj/debug/ft_strsub.o               |  Bin 0 -> 3712 bytes
+ obj/debug/ft_strtok.o               |  Bin 0 -> 4128 bytes
+ obj/debug/ft_strtolower.o           |  Bin 0 -> 3408 bytes
+ obj/debug/ft_strtoupper.o           |  Bin 0 -> 3408 bytes
+ obj/debug/ft_strtrim.o              |  Bin 0 -> 5648 bytes
+ obj/debug/ft_swap.o                 |  Bin 0 -> 3608 bytes
+ obj/debug/ft_tokdel.o               |  Bin 0 -> 3496 bytes
+ obj/debug/ft_tolower.o              |  Bin 0 -> 3176 bytes
+ obj/debug/ft_toupper.o              |  Bin 0 -> 3176 bytes
+ obj/debug/ft_version.o              |  Bin 0 -> 5408 bytes
+ obj/debug/ft_vfprintf.o             |  Bin 0 -> 3776 bytes
+ obj/debug/ft_vprintf.o              |  Bin 0 -> 3504 bytes
+ obj/debug/ft_vsnprintf.o            |  Bin 0 -> 5224 bytes
+ obj/debug/ft_vsnprintf_char.o       |  Bin 0 -> 4208 bytes
+ obj/debug/ft_vsnprintf_float.o      |  Bin 0 -> 4288 bytes
+ obj/debug/ft_vsnprintf_hexa.o       |  Bin 0 -> 4744 bytes
+ obj/debug/ft_vsnprintf_loop.o       |  Bin 0 -> 4008 bytes
+ obj/debug/ft_vsnprintf_signed.o     |  Bin 0 -> 4408 bytes
+ obj/debug/ft_vsnprintf_step.o       |  Bin 0 -> 6640 bytes
+ obj/debug/ft_vsnprintf_string.o     |  Bin 0 -> 4336 bytes
+ obj/debug/ft_vsnprintf_unsigned.o   |  Bin 0 -> 4304 bytes
+ obj/release/ft_atoi.o               |  Bin 0 -> 1704 bytes
+ obj/release/ft_atol.o               |  Bin 0 -> 1336 bytes
+ obj/release/ft_bzero.o              |  Bin 0 -> 1208 bytes
+ obj/release/ft_dlist_add_back.o     |  Bin 0 -> 1312 bytes
+ obj/release/ft_dlist_add_front.o    |  Bin 0 -> 1312 bytes
+ obj/release/ft_dlist_clear.o        |  Bin 0 -> 1312 bytes
+ obj/release/ft_dlist_copy.o         |  Bin 0 -> 1536 bytes
+ obj/release/ft_dlist_destroy.o      |  Bin 0 -> 1376 bytes
+ obj/release/ft_dlist_dup.o          |  Bin 0 -> 1416 bytes
+ obj/release/ft_dlist_init.o         |  Bin 0 -> 1184 bytes
+ obj/release/ft_dlist_node.o         |  Bin 0 -> 1544 bytes
+ obj/release/ft_dlist_remove.o       |  Bin 0 -> 1416 bytes
+ obj/release/ft_error.o              |  Bin 0 -> 1568 bytes
+ obj/release/ft_file.o               |  Bin 0 -> 3288 bytes
+ obj/release/ft_file_access.o        |  Bin 0 -> 1408 bytes
+ obj/release/ft_fprintf.o            |  Bin 0 -> 1568 bytes
+ obj/release/ft_ftoa.o               |  Bin 0 -> 3000 bytes
+ obj/release/ft_getline.o            |  Bin 0 -> 2312 bytes
+ obj/release/ft_isalnum.o            |  Bin 0 -> 1344 bytes
+ obj/release/ft_isalpha.o            |  Bin 0 -> 1176 bytes
+ obj/release/ft_isanyof.o            |  Bin 0 -> 1224 bytes
+ obj/release/ft_isascii.o            |  Bin 0 -> 1112 bytes
+ obj/release/ft_isdigit.o            |  Bin 0 -> 1136 bytes
+ obj/release/ft_isempty.o            |  Bin 0 -> 1368 bytes
+ obj/release/ft_islower.o            |  Bin 0 -> 1144 bytes
+ obj/release/ft_isprint.o            |  Bin 0 -> 1136 bytes
+ obj/release/ft_isspace.o            |  Bin 0 -> 1400 bytes
+ obj/release/ft_isupper.o            |  Bin 0 -> 1144 bytes
+ obj/release/ft_itoa.o               |  Bin 0 -> 1720 bytes
+ obj/release/ft_lstadd.o             |  Bin 0 -> 1176 bytes
+ obj/release/ft_lstback.o            |  Bin 0 -> 1184 bytes
+ obj/release/ft_lstdel.o             |  Bin 0 -> 1344 bytes
+ obj/release/ft_lstdelone.o          |  Bin 0 -> 1336 bytes
+ obj/release/ft_lsteq.o              |  Bin 0 -> 1248 bytes
+ obj/release/ft_lstfront.o           |  Bin 0 -> 1144 bytes
+ obj/release/ft_lstiter.o            |  Bin 0 -> 1160 bytes
+ obj/release/ft_lstlast.o            |  Bin 0 -> 1160 bytes
+ obj/release/ft_lstmap.o             |  Bin 0 -> 1576 bytes
+ obj/release/ft_lstneq.o             |  Bin 0 -> 1288 bytes
+ obj/release/ft_lstnew.o             |  Bin 0 -> 1384 bytes
+ obj/release/ft_lstpop_back.o        |  Bin 0 -> 1432 bytes
+ obj/release/ft_lstpop_front.o       |  Bin 0 -> 1304 bytes
+ obj/release/ft_lstpush_back.o       |  Bin 0 -> 1320 bytes
+ obj/release/ft_lstpush_front.o      |  Bin 0 -> 1176 bytes
+ obj/release/ft_lstsize.o            |  Bin 0 -> 1168 bytes
+ obj/release/ft_memalloc.o           |  Bin 0 -> 1376 bytes
+ obj/release/ft_memccpy.o            |  Bin 0 -> 1288 bytes
+ obj/release/ft_memchr.o             |  Bin 0 -> 1256 bytes
+ obj/release/ft_memcmp.o             |  Bin 0 -> 1296 bytes
+ obj/release/ft_memcpy.o             |  Bin 0 -> 1264 bytes
+ obj/release/ft_memdel.o             |  Bin 0 -> 1296 bytes
+ obj/release/ft_memdup.o             |  Bin 0 -> 1392 bytes
+ obj/release/ft_memmove.o            |  Bin 0 -> 1504 bytes
+ obj/release/ft_memrealloc.o         |  Bin 0 -> 1544 bytes
+ obj/release/ft_memset.o             |  Bin 0 -> 1232 bytes
+ obj/release/ft_ntoa.o               |  Bin 0 -> 1512 bytes
+ obj/release/ft_number_length.o      |  Bin 0 -> 1552 bytes
+ obj/release/ft_opendir.o            |  Bin 0 -> 3096 bytes
+ obj/release/ft_parse_printf_char.o  |  Bin 0 -> 3272 bytes
+ obj/release/ft_printf.o             |  Bin 0 -> 1568 bytes
+ obj/release/ft_printf_do_bool.o     |  Bin 0 -> 1816 bytes
+ obj/release/ft_printf_do_char.o     |  Bin 0 -> 1616 bytes
+ obj/release/ft_printf_do_int.o      |  Bin 0 -> 2184 bytes
+ obj/release/ft_printf_do_numbers.o  |  Bin 0 -> 2200 bytes
+ obj/release/ft_printf_do_pointers.o |  Bin 0 -> 1920 bytes
+ obj/release/ft_printf_do_string.o   |  Bin 0 -> 1864 bytes
+ obj/release/ft_printf_parse_width.o |  Bin 0 -> 1792 bytes
+ obj/release/ft_putchar.o            |  Bin 0 -> 1256 bytes
+ obj/release/ft_putchar_fd.o         |  Bin 0 -> 1272 bytes
+ obj/release/ft_putendl.o            |  Bin 0 -> 1424 bytes
+ obj/release/ft_putendl_fd.o         |  Bin 0 -> 1440 bytes
+ obj/release/ft_putnbr.o             |  Bin 0 -> 1240 bytes
+ obj/release/ft_putnbr_fd.o          |  Bin 0 -> 1392 bytes
+ obj/release/ft_putstr.o             |  Bin 0 -> 1240 bytes
+ obj/release/ft_putstr_fd.o          |  Bin 0 -> 1616 bytes
+ obj/release/ft_readdir.o            |  Bin 0 -> 2088 bytes
+ obj/release/ft_realloc.o            |  Bin 0 -> 1432 bytes
+ obj/release/ft_search_file.o        |  Bin 0 -> 2856 bytes
+ obj/release/ft_strcat.o             |  Bin 0 -> 1328 bytes
+ obj/release/ft_strchr.o             |  Bin 0 -> 1344 bytes
+ obj/release/ft_strclr.o             |  Bin 0 -> 1176 bytes
+ obj/release/ft_strcmp.o             |  Bin 0 -> 1296 bytes
+ obj/release/ft_strcpy.o             |  Bin 0 -> 1248 bytes
+ obj/release/ft_strdel.o             |  Bin 0 -> 1256 bytes
+ obj/release/ft_strdup.o             |  Bin 0 -> 1320 bytes
+ obj/release/ft_strempty.o           |  Bin 0 -> 1288 bytes
+ obj/release/ft_strequ.o             |  Bin 0 -> 1264 bytes
+ obj/release/ft_strfind.o            |  Bin 0 -> 1360 bytes
+ obj/release/ft_striter.o            |  Bin 0 -> 1200 bytes
+ obj/release/ft_striteri.o           |  Bin 0 -> 1216 bytes
+ obj/release/ft_strjoin.o            |  Bin 0 -> 1544 bytes
+ obj/release/ft_strlcat.o            |  Bin 0 -> 1544 bytes
+ obj/release/ft_strlen.o             |  Bin 0 -> 1200 bytes
+ obj/release/ft_strmap.o             |  Bin 0 -> 1424 bytes
+ obj/release/ft_strmapi.o            |  Bin 0 -> 1440 bytes
+ obj/release/ft_strmatch.o           |  Bin 0 -> 1336 bytes
+ obj/release/ft_strncat.o            |  Bin 0 -> 1432 bytes
+ obj/release/ft_strncmp.o            |  Bin 0 -> 1392 bytes
+ obj/release/ft_strncpy.o            |  Bin 0 -> 1392 bytes
+ obj/release/ft_strndup.o            |  Bin 0 -> 1568 bytes
+ obj/release/ft_strnequ.o            |  Bin 0 -> 1280 bytes
+ obj/release/ft_strnew.o             |  Bin 0 -> 1376 bytes
+ obj/release/ft_strnstr.o            |  Bin 0 -> 1600 bytes
+ obj/release/ft_strrchr.o            |  Bin 0 -> 1496 bytes
+ obj/release/ft_strrev.o             |  Bin 0 -> 1432 bytes
+ obj/release/ft_strsplit.o           |  Bin 0 -> 2512 bytes
+ obj/release/ft_strstr.o             |  Bin 0 -> 1536 bytes
+ obj/release/ft_strsub.o             |  Bin 0 -> 1488 bytes
+ obj/release/ft_strtok.o             |  Bin 0 -> 1920 bytes
+ obj/release/ft_strtolower.o         |  Bin 0 -> 1344 bytes
+ obj/release/ft_strtoupper.o         |  Bin 0 -> 1344 bytes
+ obj/release/ft_strtrim.o            |  Bin 0 -> 2576 bytes
+ obj/release/ft_swap.o               |  Bin 0 -> 1336 bytes
+ obj/release/ft_tokdel.o             |  Bin 0 -> 1416 bytes
+ obj/release/ft_tolower.o            |  Bin 0 -> 1152 bytes
+ obj/release/ft_toupper.o            |  Bin 0 -> 1152 bytes
+ obj/release/ft_version.o            |  Bin 0 -> 2688 bytes
+ obj/release/ft_vfprintf.o           |  Bin 0 -> 1368 bytes
+ obj/release/ft_vprintf.o            |  Bin 0 -> 1264 bytes
+ obj/release/ft_vsnprintf.o          |  Bin 0 -> 2208 bytes
+ obj/release/ft_vsnprintf_char.o     |  Bin 0 -> 1520 bytes
+ obj/release/ft_vsnprintf_float.o    |  Bin 0 -> 1608 bytes
+ obj/release/ft_vsnprintf_hexa.o     |  Bin 0 -> 1984 bytes
+ obj/release/ft_vsnprintf_loop.o     |  Bin 0 -> 1448 bytes
+ obj/release/ft_vsnprintf_signed.o   |  Bin 0 -> 1688 bytes
+ obj/release/ft_vsnprintf_step.o     |  Bin 0 -> 3464 bytes
+ obj/release/ft_vsnprintf_string.o   |  Bin 0 -> 1640 bytes
+ obj/release/ft_vsnprintf_unsigned.o |  Bin 0 -> 1600 bytes
+ src/ft_ftoa.c                       |   40 +++++++++++++++++++++++-----------------
+ src/ft_parse_printf_char.c          |    4 ++--
+ src/ft_printf.c                     |    2 +-
+ src/ft_vsnprintf_long.c             |   13 +++++++++++++
+ src/ft_vsnprintf_step.c             |   78 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+ tests/Makefile                      |   32 ++++++++++++++++++++++++++++++++
+ tests/bin/ftoa                      |  Bin 0 -> 49305 bytes
+ tests/ftoa/Makefile                 |   52 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/ftoa/ftoa                     |  Bin 0 -> 49305 bytes
+ tests/ftoa/ftoa.c                   |   80 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/ftoa/ftoa.o                   |  Bin 0 -> 7208 bytes
+ tests/make.sh                       |   28 ++++++++++++++++++++++++++++
+ 273 files changed, 348 insertions(+), 33 deletions(-)
+ create mode 100644 libft.a
+ create mode 100644 libft_d.a
+ create mode 100644 obj/debug/ft_atoi.o
+ create mode 100644 obj/debug/ft_atol.o
+ create mode 100644 obj/debug/ft_bzero.o
+ create mode 100644 obj/debug/ft_dlist_add_back.o
+ create mode 100644 obj/debug/ft_dlist_add_front.o
+ create mode 100644 obj/debug/ft_dlist_clear.o
+ create mode 100644 obj/debug/ft_dlist_copy.o
+ create mode 100644 obj/debug/ft_dlist_destroy.o
+ create mode 100644 obj/debug/ft_dlist_dup.o
+ create mode 100644 obj/debug/ft_dlist_init.o
+ create mode 100644 obj/debug/ft_dlist_node.o
+ create mode 100644 obj/debug/ft_dlist_remove.o
+ create mode 100644 obj/debug/ft_error.o
+ create mode 100644 obj/debug/ft_file.o
+ create mode 100644 obj/debug/ft_file_access.o
+ create mode 100644 obj/debug/ft_fprintf.o
+ create mode 100644 obj/debug/ft_ftoa.o
+ create mode 100644 obj/debug/ft_getline.o
+ create mode 100644 obj/debug/ft_isalnum.o
+ create mode 100644 obj/debug/ft_isalpha.o
+ create mode 100644 obj/debug/ft_isanyof.o
+ create mode 100644 obj/debug/ft_isascii.o
+ create mode 100644 obj/debug/ft_isdigit.o
+ create mode 100644 obj/debug/ft_isempty.o
+ create mode 100644 obj/debug/ft_islower.o
+ create mode 100644 obj/debug/ft_isprint.o
+ create mode 100644 obj/debug/ft_isspace.o
+ create mode 100644 obj/debug/ft_isupper.o
+ create mode 100644 obj/debug/ft_itoa.o
+ create mode 100644 obj/debug/ft_lstadd.o
+ create mode 100644 obj/debug/ft_lstback.o
+ create mode 100644 obj/debug/ft_lstdel.o
+ create mode 100644 obj/debug/ft_lstdelone.o
+ create mode 100644 obj/debug/ft_lsteq.o
+ create mode 100644 obj/debug/ft_lstfront.o
+ create mode 100644 obj/debug/ft_lstiter.o
+ create mode 100644 obj/debug/ft_lstlast.o
+ create mode 100644 obj/debug/ft_lstmap.o
+ create mode 100644 obj/debug/ft_lstneq.o
+ create mode 100644 obj/debug/ft_lstnew.o
+ create mode 100644 obj/debug/ft_lstpop_back.o
+ create mode 100644 obj/debug/ft_lstpop_front.o
+ create mode 100644 obj/debug/ft_lstpush_back.o
+ create mode 100644 obj/debug/ft_lstpush_front.o
+ create mode 100644 obj/debug/ft_lstsize.o
+ create mode 100644 obj/debug/ft_memalloc.o
+ create mode 100644 obj/debug/ft_memccpy.o
+ create mode 100644 obj/debug/ft_memchr.o
+ create mode 100644 obj/debug/ft_memcmp.o
+ create mode 100644 obj/debug/ft_memcpy.o
+ create mode 100644 obj/debug/ft_memdel.o
+ create mode 100644 obj/debug/ft_memdup.o
+ create mode 100644 obj/debug/ft_memmove.o
+ create mode 100644 obj/debug/ft_memrealloc.o
+ create mode 100644 obj/debug/ft_memset.o
+ create mode 100644 obj/debug/ft_ntoa.o
+ create mode 100644 obj/debug/ft_number_length.o
+ create mode 100644 obj/debug/ft_opendir.o
+ create mode 100644 obj/debug/ft_parse_printf_char.o
+ create mode 100644 obj/debug/ft_printf.o
+ create mode 100644 obj/debug/ft_printf_do_bool.o
+ create mode 100644 obj/debug/ft_printf_do_char.o
+ create mode 100644 obj/debug/ft_printf_do_int.o
+ create mode 100644 obj/debug/ft_printf_do_numbers.o
+ create mode 100644 obj/debug/ft_printf_do_pointers.o
+ create mode 100644 obj/debug/ft_printf_do_string.o
+ create mode 100644 obj/debug/ft_printf_parse_width.o
+ create mode 100644 obj/debug/ft_putchar.o
+ create mode 100644 obj/debug/ft_putchar_fd.o
+ create mode 100644 obj/debug/ft_putendl.o
+ create mode 100644 obj/debug/ft_putendl_fd.o
+ create mode 100644 obj/debug/ft_putnbr.o
+ create mode 100644 obj/debug/ft_putnbr_fd.o
+ create mode 100644 obj/debug/ft_putstr.o
+ create mode 100644 obj/debug/ft_putstr_fd.o
+ create mode 100644 obj/debug/ft_readdir.o
+ create mode 100644 obj/debug/ft_realloc.o
+ create mode 100644 obj/debug/ft_search_file.o
+ create mode 100644 obj/debug/ft_strcat.o
+ create mode 100644 obj/debug/ft_strchr.o
+ create mode 100644 obj/debug/ft_strclr.o
+ create mode 100644 obj/debug/ft_strcmp.o
+ create mode 100644 obj/debug/ft_strcpy.o
+ create mode 100644 obj/debug/ft_strdel.o
+ create mode 100644 obj/debug/ft_strdup.o
+ create mode 100644 obj/debug/ft_strempty.o
+ create mode 100644 obj/debug/ft_strequ.o
+ create mode 100644 obj/debug/ft_strfind.o
+ create mode 100644 obj/debug/ft_striter.o
+ create mode 100644 obj/debug/ft_striteri.o
+ create mode 100644 obj/debug/ft_strjoin.o
+ create mode 100644 obj/debug/ft_strlcat.o
+ create mode 100644 obj/debug/ft_strlen.o
+ create mode 100644 obj/debug/ft_strmap.o
+ create mode 100644 obj/debug/ft_strmapi.o
+ create mode 100644 obj/debug/ft_strmatch.o
+ create mode 100644 obj/debug/ft_strncat.o
+ create mode 100644 obj/debug/ft_strncmp.o
+ create mode 100644 obj/debug/ft_strncpy.o
+ create mode 100644 obj/debug/ft_strndup.o
+ create mode 100644 obj/debug/ft_strnequ.o
+ create mode 100644 obj/debug/ft_strnew.o
+ create mode 100644 obj/debug/ft_strnstr.o
+ create mode 100644 obj/debug/ft_strrchr.o
+ create mode 100644 obj/debug/ft_strrev.o
+ create mode 100644 obj/debug/ft_strsplit.o
+ create mode 100644 obj/debug/ft_strstr.o
+ create mode 100644 obj/debug/ft_strsub.o
+ create mode 100644 obj/debug/ft_strtok.o
+ create mode 100644 obj/debug/ft_strtolower.o
+ create mode 100644 obj/debug/ft_strtoupper.o
+ create mode 100644 obj/debug/ft_strtrim.o
+ create mode 100644 obj/debug/ft_swap.o
+ create mode 100644 obj/debug/ft_tokdel.o
+ create mode 100644 obj/debug/ft_tolower.o
+ create mode 100644 obj/debug/ft_toupper.o
+ create mode 100644 obj/debug/ft_version.o
+ create mode 100644 obj/debug/ft_vfprintf.o
+ create mode 100644 obj/debug/ft_vprintf.o
+ create mode 100644 obj/debug/ft_vsnprintf.o
+ create mode 100644 obj/debug/ft_vsnprintf_char.o
+ create mode 100644 obj/debug/ft_vsnprintf_float.o
+ create mode 100644 obj/debug/ft_vsnprintf_hexa.o
+ create mode 100644 obj/debug/ft_vsnprintf_loop.o
+ create mode 100644 obj/debug/ft_vsnprintf_signed.o
+ create mode 100644 obj/debug/ft_vsnprintf_step.o
+ create mode 100644 obj/debug/ft_vsnprintf_string.o
+ create mode 100644 obj/debug/ft_vsnprintf_unsigned.o
+ create mode 100644 obj/release/ft_atoi.o
+ create mode 100644 obj/release/ft_atol.o
+ create mode 100644 obj/release/ft_bzero.o
+ create mode 100644 obj/release/ft_dlist_add_back.o
+ create mode 100644 obj/release/ft_dlist_add_front.o
+ create mode 100644 obj/release/ft_dlist_clear.o
+ create mode 100644 obj/release/ft_dlist_copy.o
+ create mode 100644 obj/release/ft_dlist_destroy.o
+ create mode 100644 obj/release/ft_dlist_dup.o
+ create mode 100644 obj/release/ft_dlist_init.o
+ create mode 100644 obj/release/ft_dlist_node.o
+ create mode 100644 obj/release/ft_dlist_remove.o
+ create mode 100644 obj/release/ft_error.o
+ create mode 100644 obj/release/ft_file.o
+ create mode 100644 obj/release/ft_file_access.o
+ create mode 100644 obj/release/ft_fprintf.o
+ create mode 100644 obj/release/ft_ftoa.o
+ create mode 100644 obj/release/ft_getline.o
+ create mode 100644 obj/release/ft_isalnum.o
+ create mode 100644 obj/release/ft_isalpha.o
+ create mode 100644 obj/release/ft_isanyof.o
+ create mode 100644 obj/release/ft_isascii.o
+ create mode 100644 obj/release/ft_isdigit.o
+ create mode 100644 obj/release/ft_isempty.o
+ create mode 100644 obj/release/ft_islower.o
+ create mode 100644 obj/release/ft_isprint.o
+ create mode 100644 obj/release/ft_isspace.o
+ create mode 100644 obj/release/ft_isupper.o
+ create mode 100644 obj/release/ft_itoa.o
+ create mode 100644 obj/release/ft_lstadd.o
+ create mode 100644 obj/release/ft_lstback.o
+ create mode 100644 obj/release/ft_lstdel.o
+ create mode 100644 obj/release/ft_lstdelone.o
+ create mode 100644 obj/release/ft_lsteq.o
+ create mode 100644 obj/release/ft_lstfront.o
+ create mode 100644 obj/release/ft_lstiter.o
+ create mode 100644 obj/release/ft_lstlast.o
+ create mode 100644 obj/release/ft_lstmap.o
+ create mode 100644 obj/release/ft_lstneq.o
+ create mode 100644 obj/release/ft_lstnew.o
+ create mode 100644 obj/release/ft_lstpop_back.o
+ create mode 100644 obj/release/ft_lstpop_front.o
+ create mode 100644 obj/release/ft_lstpush_back.o
+ create mode 100644 obj/release/ft_lstpush_front.o
+ create mode 100644 obj/release/ft_lstsize.o
+ create mode 100644 obj/release/ft_memalloc.o
+ create mode 100644 obj/release/ft_memccpy.o
+ create mode 100644 obj/release/ft_memchr.o
+ create mode 100644 obj/release/ft_memcmp.o
+ create mode 100644 obj/release/ft_memcpy.o
+ create mode 100644 obj/release/ft_memdel.o
+ create mode 100644 obj/release/ft_memdup.o
+ create mode 100644 obj/release/ft_memmove.o
+ create mode 100644 obj/release/ft_memrealloc.o
+ create mode 100644 obj/release/ft_memset.o
+ create mode 100644 obj/release/ft_ntoa.o
+ create mode 100644 obj/release/ft_number_length.o
+ create mode 100644 obj/release/ft_opendir.o
+ create mode 100644 obj/release/ft_parse_printf_char.o
+ create mode 100644 obj/release/ft_printf.o
+ create mode 100644 obj/release/ft_printf_do_bool.o
+ create mode 100644 obj/release/ft_printf_do_char.o
+ create mode 100644 obj/release/ft_printf_do_int.o
+ create mode 100644 obj/release/ft_printf_do_numbers.o
+ create mode 100644 obj/release/ft_printf_do_pointers.o
+ create mode 100644 obj/release/ft_printf_do_string.o
+ create mode 100644 obj/release/ft_printf_parse_width.o
+ create mode 100644 obj/release/ft_putchar.o
+ create mode 100644 obj/release/ft_putchar_fd.o
+ create mode 100644 obj/release/ft_putendl.o
+ create mode 100644 obj/release/ft_putendl_fd.o
+ create mode 100644 obj/release/ft_putnbr.o
+ create mode 100644 obj/release/ft_putnbr_fd.o
+ create mode 100644 obj/release/ft_putstr.o
+ create mode 100644 obj/release/ft_putstr_fd.o
+ create mode 100644 obj/release/ft_readdir.o
+ create mode 100644 obj/release/ft_realloc.o
+ create mode 100644 obj/release/ft_search_file.o
+ create mode 100644 obj/release/ft_strcat.o
+ create mode 100644 obj/release/ft_strchr.o
+ create mode 100644 obj/release/ft_strclr.o
+ create mode 100644 obj/release/ft_strcmp.o
+ create mode 100644 obj/release/ft_strcpy.o
+ create mode 100644 obj/release/ft_strdel.o
+ create mode 100644 obj/release/ft_strdup.o
+ create mode 100644 obj/release/ft_strempty.o
+ create mode 100644 obj/release/ft_strequ.o
+ create mode 100644 obj/release/ft_strfind.o
+ create mode 100644 obj/release/ft_striter.o
+ create mode 100644 obj/release/ft_striteri.o
+ create mode 100644 obj/release/ft_strjoin.o
+ create mode 100644 obj/release/ft_strlcat.o
+ create mode 100644 obj/release/ft_strlen.o
+ create mode 100644 obj/release/ft_strmap.o
+ create mode 100644 obj/release/ft_strmapi.o
+ create mode 100644 obj/release/ft_strmatch.o
+ create mode 100644 obj/release/ft_strncat.o
+ create mode 100644 obj/release/ft_strncmp.o
+ create mode 100644 obj/release/ft_strncpy.o
+ create mode 100644 obj/release/ft_strndup.o
+ create mode 100644 obj/release/ft_strnequ.o
+ create mode 100644 obj/release/ft_strnew.o
+ create mode 100644 obj/release/ft_strnstr.o
+ create mode 100644 obj/release/ft_strrchr.o
+ create mode 100644 obj/release/ft_strrev.o
+ create mode 100644 obj/release/ft_strsplit.o
+ create mode 100644 obj/release/ft_strstr.o
+ create mode 100644 obj/release/ft_strsub.o
+ create mode 100644 obj/release/ft_strtok.o
+ create mode 100644 obj/release/ft_strtolower.o
+ create mode 100644 obj/release/ft_strtoupper.o
+ create mode 100644 obj/release/ft_strtrim.o
+ create mode 100644 obj/release/ft_swap.o
+ create mode 100644 obj/release/ft_tokdel.o
+ create mode 100644 obj/release/ft_tolower.o
+ create mode 100644 obj/release/ft_toupper.o
+ create mode 100644 obj/release/ft_version.o
+ create mode 100644 obj/release/ft_vfprintf.o
+ create mode 100644 obj/release/ft_vprintf.o
+ create mode 100644 obj/release/ft_vsnprintf.o
+ create mode 100644 obj/release/ft_vsnprintf_char.o
+ create mode 100644 obj/release/ft_vsnprintf_float.o
+ create mode 100644 obj/release/ft_vsnprintf_hexa.o
+ create mode 100644 obj/release/ft_vsnprintf_loop.o
+ create mode 100644 obj/release/ft_vsnprintf_signed.o
+ create mode 100644 obj/release/ft_vsnprintf_step.o
+ create mode 100644 obj/release/ft_vsnprintf_string.o
+ create mode 100644 obj/release/ft_vsnprintf_unsigned.o
+ create mode 100644 src/ft_vsnprintf_long.c
+ create mode 100644 tests/Makefile
+ create mode 100755 tests/bin/ftoa
+ create mode 100644 tests/ftoa/Makefile
+ create mode 100755 tests/ftoa/ftoa
+ create mode 100644 tests/ftoa/ftoa.c
+ create mode 100644 tests/ftoa/ftoa.o
+ create mode 100755 tests/make.sh
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:19:39[00m][166Dggit commit -am "Update: merged test branch into dev branch"
+# On branch dev
+nothing to commit (working directory clean)
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:19:56[00m][166Dggit push origin dev
+Total 0 (delta 0), reused 0 (delta 0)
+To dev_darkboss@git.quantum-realm.com:libft
+   5ca338f..6caeb3a  dev -> dev
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:20:03[00m][166Dggit g  l lllw l  L [H[J[0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:20:03[00m][166D
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:20:31[00m][166Dlls
+auteur  [0m[01;34minc[0m  libft.a  libft_d.a  Makefile  [01;34mobj[0m  [01;34msrc[0m  [01;34mtests[0m  Version.mak
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:20:32[00m][166Dm ggit status
+# On branch dev
+nothing to commit (working directory clean)
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:20:36[00m][166D[H[J[0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1/libft
+[37m % [0m[39m[49m[K[157C[[33m0:20:36[00m][166Dccd ..
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1
+[37m % [0m[39m[49m[K[157C[[33m0:20:39[00m][166D../gsync.sh[1m [0m[0m 
+Removing objects
+Removing targets
+[dev 26cc612] Synchronizing Project
+ 258 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 libft.a
+ delete mode 100644 libft_d.a
+ delete mode 100644 obj/debug/ft_atoi.o
+ delete mode 100644 obj/debug/ft_atol.o
+ delete mode 100644 obj/debug/ft_bzero.o
+ delete mode 100644 obj/debug/ft_dlist_add_back.o
+ delete mode 100644 obj/debug/ft_dlist_add_front.o
+ delete mode 100644 obj/debug/ft_dlist_clear.o
+ delete mode 100644 obj/debug/ft_dlist_copy.o
+ delete mode 100644 obj/debug/ft_dlist_destroy.o
+ delete mode 100644 obj/debug/ft_dlist_dup.o
+ delete mode 100644 obj/debug/ft_dlist_init.o
+ delete mode 100644 obj/debug/ft_dlist_node.o
+ delete mode 100644 obj/debug/ft_dlist_remove.o
+ delete mode 100644 obj/debug/ft_error.o
+ delete mode 100644 obj/debug/ft_file.o
+ delete mode 100644 obj/debug/ft_file_access.o
+ delete mode 100644 obj/debug/ft_fprintf.o
+ delete mode 100644 obj/debug/ft_ftoa.o
+ delete mode 100644 obj/debug/ft_getline.o
+ delete mode 100644 obj/debug/ft_isalnum.o
+ delete mode 100644 obj/debug/ft_isalpha.o
+ delete mode 100644 obj/debug/ft_isanyof.o
+ delete mode 100644 obj/debug/ft_isascii.o
+ delete mode 100644 obj/debug/ft_isdigit.o
+ delete mode 100644 obj/debug/ft_isempty.o
+ delete mode 100644 obj/debug/ft_islower.o
+ delete mode 100644 obj/debug/ft_isprint.o
+ delete mode 100644 obj/debug/ft_isspace.o
+ delete mode 100644 obj/debug/ft_isupper.o
+ delete mode 100644 obj/debug/ft_itoa.o
+ delete mode 100644 obj/debug/ft_lstadd.o
+ delete mode 100644 obj/debug/ft_lstback.o
+ delete mode 100644 obj/debug/ft_lstdel.o
+ delete mode 100644 obj/debug/ft_lstdelone.o
+ delete mode 100644 obj/debug/ft_lsteq.o
+ delete mode 100644 obj/debug/ft_lstfront.o
+ delete mode 100644 obj/debug/ft_lstiter.o
+ delete mode 100644 obj/debug/ft_lstlast.o
+ delete mode 100644 obj/debug/ft_lstmap.o
+ delete mode 100644 obj/debug/ft_lstneq.o
+ delete mode 100644 obj/debug/ft_lstnew.o
+ delete mode 100644 obj/debug/ft_lstpop_back.o
+ delete mode 100644 obj/debug/ft_lstpop_front.o
+ delete mode 100644 obj/debug/ft_lstpush_back.o
+ delete mode 100644 obj/debug/ft_lstpush_front.o
+ delete mode 100644 obj/debug/ft_lstsize.o
+ delete mode 100644 obj/debug/ft_memalloc.o
+ delete mode 100644 obj/debug/ft_memccpy.o
+ delete mode 100644 obj/debug/ft_memchr.o
+ delete mode 100644 obj/debug/ft_memcmp.o
+ delete mode 100644 obj/debug/ft_memcpy.o
+ delete mode 100644 obj/debug/ft_memdel.o
+ delete mode 100644 obj/debug/ft_memdup.o
+ delete mode 100644 obj/debug/ft_memmove.o
+ delete mode 100644 obj/debug/ft_memrealloc.o
+ delete mode 100644 obj/debug/ft_memset.o
+ delete mode 100644 obj/debug/ft_ntoa.o
+ delete mode 100644 obj/debug/ft_number_length.o
+ delete mode 100644 obj/debug/ft_opendir.o
+ delete mode 100644 obj/debug/ft_parse_printf_char.o
+ delete mode 100644 obj/debug/ft_printf.o
+ delete mode 100644 obj/debug/ft_printf_do_bool.o
+ delete mode 100644 obj/debug/ft_printf_do_char.o
+ delete mode 100644 obj/debug/ft_printf_do_int.o
+ delete mode 100644 obj/debug/ft_printf_do_numbers.o
+ delete mode 100644 obj/debug/ft_printf_do_pointers.o
+ delete mode 100644 obj/debug/ft_printf_do_string.o
+ delete mode 100644 obj/debug/ft_printf_parse_width.o
+ delete mode 100644 obj/debug/ft_putchar.o
+ delete mode 100644 obj/debug/ft_putchar_fd.o
+ delete mode 100644 obj/debug/ft_putendl.o
+ delete mode 100644 obj/debug/ft_putendl_fd.o
+ delete mode 100644 obj/debug/ft_putnbr.o
+ delete mode 100644 obj/debug/ft_putnbr_fd.o
+ delete mode 100644 obj/debug/ft_putstr.o
+ delete mode 100644 obj/debug/ft_putstr_fd.o
+ delete mode 100644 obj/debug/ft_readdir.o
+ delete mode 100644 obj/debug/ft_realloc.o
+ delete mode 100644 obj/debug/ft_search_file.o
+ delete mode 100644 obj/debug/ft_strcat.o
+ delete mode 100644 obj/debug/ft_strchr.o
+ delete mode 100644 obj/debug/ft_strclr.o
+ delete mode 100644 obj/debug/ft_strcmp.o
+ delete mode 100644 obj/debug/ft_strcpy.o
+ delete mode 100644 obj/debug/ft_strdel.o
+ delete mode 100644 obj/debug/ft_strdup.o
+ delete mode 100644 obj/debug/ft_strempty.o
+ delete mode 100644 obj/debug/ft_strequ.o
+ delete mode 100644 obj/debug/ft_strfind.o
+ delete mode 100644 obj/debug/ft_striter.o
+ delete mode 100644 obj/debug/ft_striteri.o
+ delete mode 100644 obj/debug/ft_strjoin.o
+ delete mode 100644 obj/debug/ft_strlcat.o
+ delete mode 100644 obj/debug/ft_strlen.o
+ delete mode 100644 obj/debug/ft_strmap.o
+ delete mode 100644 obj/debug/ft_strmapi.o
+ delete mode 100644 obj/debug/ft_strmatch.o
+ delete mode 100644 obj/debug/ft_strncat.o
+ delete mode 100644 obj/debug/ft_strncmp.o
+ delete mode 100644 obj/debug/ft_strncpy.o
+ delete mode 100644 obj/debug/ft_strndup.o
+ delete mode 100644 obj/debug/ft_strnequ.o
+ delete mode 100644 obj/debug/ft_strnew.o
+ delete mode 100644 obj/debug/ft_strnstr.o
+ delete mode 100644 obj/debug/ft_strrchr.o
+ delete mode 100644 obj/debug/ft_strrev.o
+ delete mode 100644 obj/debug/ft_strsplit.o
+ delete mode 100644 obj/debug/ft_strstr.o
+ delete mode 100644 obj/debug/ft_strsub.o
+ delete mode 100644 obj/debug/ft_strtok.o
+ delete mode 100644 obj/debug/ft_strtolower.o
+ delete mode 100644 obj/debug/ft_strtoupper.o
+ delete mode 100644 obj/debug/ft_strtrim.o
+ delete mode 100644 obj/debug/ft_swap.o
+ delete mode 100644 obj/debug/ft_tokdel.o
+ delete mode 100644 obj/debug/ft_tolower.o
+ delete mode 100644 obj/debug/ft_toupper.o
+ delete mode 100644 obj/debug/ft_version.o
+ delete mode 100644 obj/debug/ft_vfprintf.o
+ delete mode 100644 obj/debug/ft_vprintf.o
+ delete mode 100644 obj/debug/ft_vsnprintf.o
+ delete mode 100644 obj/debug/ft_vsnprintf_char.o
+ delete mode 100644 obj/debug/ft_vsnprintf_float.o
+ delete mode 100644 obj/debug/ft_vsnprintf_hexa.o
+ delete mode 100644 obj/debug/ft_vsnprintf_loop.o
+ delete mode 100644 obj/debug/ft_vsnprintf_signed.o
+ delete mode 100644 obj/debug/ft_vsnprintf_step.o
+ delete mode 100644 obj/debug/ft_vsnprintf_string.o
+ delete mode 100644 obj/debug/ft_vsnprintf_unsigned.o
+ delete mode 100644 obj/release/ft_atoi.o
+ delete mode 100644 obj/release/ft_atol.o
+ delete mode 100644 obj/release/ft_bzero.o
+ delete mode 100644 obj/release/ft_dlist_add_back.o
+ delete mode 100644 obj/release/ft_dlist_add_front.o
+ delete mode 100644 obj/release/ft_dlist_clear.o
+ delete mode 100644 obj/release/ft_dlist_copy.o
+ delete mode 100644 obj/release/ft_dlist_destroy.o
+ delete mode 100644 obj/release/ft_dlist_dup.o
+ delete mode 100644 obj/release/ft_dlist_init.o
+ delete mode 100644 obj/release/ft_dlist_node.o
+ delete mode 100644 obj/release/ft_dlist_remove.o
+ delete mode 100644 obj/release/ft_error.o
+ delete mode 100644 obj/release/ft_file.o
+ delete mode 100644 obj/release/ft_file_access.o
+ delete mode 100644 obj/release/ft_fprintf.o
+ delete mode 100644 obj/release/ft_ftoa.o
+ delete mode 100644 obj/release/ft_getline.o
+ delete mode 100644 obj/release/ft_isalnum.o
+ delete mode 100644 obj/release/ft_isalpha.o
+ delete mode 100644 obj/release/ft_isanyof.o
+ delete mode 100644 obj/release/ft_isascii.o
+ delete mode 100644 obj/release/ft_isdigit.o
+ delete mode 100644 obj/release/ft_isempty.o
+ delete mode 100644 obj/release/ft_islower.o
+ delete mode 100644 obj/release/ft_isprint.o
+ delete mode 100644 obj/release/ft_isspace.o
+ delete mode 100644 obj/release/ft_isupper.o
+ delete mode 100644 obj/release/ft_itoa.o
+ delete mode 100644 obj/release/ft_lstadd.o
+ delete mode 100644 obj/release/ft_lstback.o
+ delete mode 100644 obj/release/ft_lstdel.o
+ delete mode 100644 obj/release/ft_lstdelone.o
+ delete mode 100644 obj/release/ft_lsteq.o
+ delete mode 100644 obj/release/ft_lstfront.o
+ delete mode 100644 obj/release/ft_lstiter.o
+ delete mode 100644 obj/release/ft_lstlast.o
+ delete mode 100644 obj/release/ft_lstmap.o
+ delete mode 100644 obj/release/ft_lstneq.o
+ delete mode 100644 obj/release/ft_lstnew.o
+ delete mode 100644 obj/release/ft_lstpop_back.o
+ delete mode 100644 obj/release/ft_lstpop_front.o
+ delete mode 100644 obj/release/ft_lstpush_back.o
+ delete mode 100644 obj/release/ft_lstpush_front.o
+ delete mode 100644 obj/release/ft_lstsize.o
+ delete mode 100644 obj/release/ft_memalloc.o
+ delete mode 100644 obj/release/ft_memccpy.o
+ delete mode 100644 obj/release/ft_memchr.o
+ delete mode 100644 obj/release/ft_memcmp.o
+ delete mode 100644 obj/release/ft_memcpy.o
+ delete mode 100644 obj/release/ft_memdel.o
+ delete mode 100644 obj/release/ft_memdup.o
+ delete mode 100644 obj/release/ft_memmove.o
+ delete mode 100644 obj/release/ft_memrealloc.o
+ delete mode 100644 obj/release/ft_memset.o
+ delete mode 100644 obj/release/ft_ntoa.o
+ delete mode 100644 obj/release/ft_number_length.o
+ delete mode 100644 obj/release/ft_opendir.o
+ delete mode 100644 obj/release/ft_parse_printf_char.o
+ delete mode 100644 obj/release/ft_printf.o
+ delete mode 100644 obj/release/ft_printf_do_bool.o
+ delete mode 100644 obj/release/ft_printf_do_char.o
+ delete mode 100644 obj/release/ft_printf_do_int.o
+ delete mode 100644 obj/release/ft_printf_do_numbers.o
+ delete mode 100644 obj/release/ft_printf_do_pointers.o
+ delete mode 100644 obj/release/ft_printf_do_string.o
+ delete mode 100644 obj/release/ft_printf_parse_width.o
+ delete mode 100644 obj/release/ft_putchar.o
+ delete mode 100644 obj/release/ft_putchar_fd.o
+ delete mode 100644 obj/release/ft_putendl.o
+ delete mode 100644 obj/release/ft_putendl_fd.o
+ delete mode 100644 obj/release/ft_putnbr.o
+ delete mode 100644 obj/release/ft_putnbr_fd.o
+ delete mode 100644 obj/release/ft_putstr.o
+ delete mode 100644 obj/release/ft_putstr_fd.o
+ delete mode 100644 obj/release/ft_readdir.o
+ delete mode 100644 obj/release/ft_realloc.o
+ delete mode 100644 obj/release/ft_search_file.o
+ delete mode 100644 obj/release/ft_strcat.o
+ delete mode 100644 obj/release/ft_strchr.o
+ delete mode 100644 obj/release/ft_strclr.o
+ delete mode 100644 obj/release/ft_strcmp.o
+ delete mode 100644 obj/release/ft_strcpy.o
+ delete mode 100644 obj/release/ft_strdel.o
+ delete mode 100644 obj/release/ft_strdup.o
+ delete mode 100644 obj/release/ft_strempty.o
+ delete mode 100644 obj/release/ft_strequ.o
+ delete mode 100644 obj/release/ft_strfind.o
+ delete mode 100644 obj/release/ft_striter.o
+ delete mode 100644 obj/release/ft_striteri.o
+ delete mode 100644 obj/release/ft_strjoin.o
+ delete mode 100644 obj/release/ft_strlcat.o
+ delete mode 100644 obj/release/ft_strlen.o
+ delete mode 100644 obj/release/ft_strmap.o
+ delete mode 100644 obj/release/ft_strmapi.o
+ delete mode 100644 obj/release/ft_strmatch.o
+ delete mode 100644 obj/release/ft_strncat.o
+ delete mode 100644 obj/release/ft_strncmp.o
+ delete mode 100644 obj/release/ft_strncpy.o
+ delete mode 100644 obj/release/ft_strndup.o
+ delete mode 100644 obj/release/ft_strnequ.o
+ delete mode 100644 obj/release/ft_strnew.o
+ delete mode 100644 obj/release/ft_strnstr.o
+ delete mode 100644 obj/release/ft_strrchr.o
+ delete mode 100644 obj/release/ft_strrev.o
+ delete mode 100644 obj/release/ft_strsplit.o
+ delete mode 100644 obj/release/ft_strstr.o
+ delete mode 100644 obj/release/ft_strsub.o
+ delete mode 100644 obj/release/ft_strtok.o
+ delete mode 100644 obj/release/ft_strtolower.o
+ delete mode 100644 obj/release/ft_strtoupper.o
+ delete mode 100644 obj/release/ft_strtrim.o
+ delete mode 100644 obj/release/ft_swap.o
+ delete mode 100644 obj/release/f
