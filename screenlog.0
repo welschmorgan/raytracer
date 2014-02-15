@@ -341,3 +341,35 @@ Removing objects
 Removing targets
 # On branch dev
 nothing to commit (working directory clean)
+Everything up-to-date
+# On branch master
+nothing to commit (working directory clean)
+Everything up-to-date
+Removing object files
+Removing targets
+[master 72267c9] Synchronizing Project
+ 1 file changed, 343 insertions(+), 8137 deletions(-)
+ rewrite screenlog.0 (99%)
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 1.17 KiB, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To dev_darkboss@git.quantum-realm.com:rtv1
+   1e636eb..72267c9  master -> master
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1
+[37m % [0m[39m[49m[K[157C[[33m0:25:05[00m][166Dmmake fclean
+Removing object files
+Removing targets
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1
+[37m % [0m[39m[49m[K[157C[[33m0:25:09[00m][166D. ccd c  g g ../gsync
+zsh: no such file or directory: ./gsync
+[1m[3m%[23m[1m[0m                                                                                                                                                                          [0m[23m[24m[J[44mdarkboss@shadowboss[49m [1m[32m~/42/infog-1-001/rtv1
+[37m % [0m[39m[49m[K[157C[[33m0:25:17[00m][166D./gsync.sh[1m [0m[0m 
+Removing objects
+Removing targets
+# On branch dev
+nothing to commit (working directory clean)
+Everything up-to-date
+# On branch master
+nothing to commit (working directory clean)
