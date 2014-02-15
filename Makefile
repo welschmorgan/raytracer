@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/01/14 01:31:26 by mwelsch           #+#    #+#              #
-#    Updated: 2014/02/15 00:01:29 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/02/15 01:19:37 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -54,6 +54,12 @@ RM			= rm -f
 CC			= clang $(CFLAGS)
 CC_D		= clang $(CFLAGS_D)
 
+
+all: debug release
+
+debug: $(NAME_D)
+release: $(NAME)
+
 $(NAME): $(UNITS_O) $(LIBFT_TARGET) $(LIBMATH_TARGET)
 	@printf "\r\033[KLinking $@\n"
 	@$(CC) -o $@ $^ $(LDFLAGS)
@@ -81,17 +87,6 @@ $(OBJ_RELEASE_DIR)/%.o: src/%.c
 $(OBJ_DEBUG_DIR)/%.o: src/%.c
 	@printf "\r\033[KCompiling $<"
 	@$(CC_D) -c -o $@ $< $(INCLUDE)
-
-$(MAP_CREATOR):
-	@make $@ -C ./map_creator
-
-$(MAP_CREATOR_D):
-	@make $@ -C ./map_creator
-
-all: debug release
-
-debug: $(NAME_D)
-release: $(NAME)
 
 clean:
 	@echo Removing object files
