@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 17:46:59 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/14 17:47:11 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/16 00:07:11 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,21 @@ int						color_hex(t_color col)
 	return (ret);
 }
 
-t_color					color_ray(t_ray_result *ray)
+int						color_ray(t_ray_result *ray, t_material *material)
 {
+	int					ret;
+
+	ret = 0xff000000;
 	if (ray && ray->hit)
-		return (color_rgba(255, 255, 0, 0));
-	return (color_rgba(255, 0, 0, 0));
+	{
+		if (material)
+		{
+			ret |= (unsigned char)(255.0f * material->emissive[RED]) << 16;
+			ret |= (unsigned char)(255.0f * material->emissive[GREEN]) << 8;
+			ret |= (unsigned char)(255.0f * material->emissive[BLUE]);
+		}
+		else
+			ret = 0xffff0000;
+	}
+	return (ret);
 }

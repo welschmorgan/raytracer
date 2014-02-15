@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 05:43:55 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/14 19:20:11 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/15 23:48:13 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,12 +79,28 @@ typedef enum			e_rt_error
 	RTE_SUCCESS = RTE_NONE
 }						t_rt_error;
 
+typedef struct			s_material
+{
+	float				specular[4];
+	float				diffuse[4];
+	float				emissive[4];
+	float				shininess;
+}						t_material;
+
 typedef struct			s_sphere
 {
 	t_real				radius;
 	t_vec3				position;
+	t_material			*material;
 }						t_sphere;
 
+typedef enum			e_color_part
+{
+	ALPHA,
+	RED,
+	GREEN,
+	BLUE
+}						t_color_part;
 
 # ifndef PI
 #  define PI 3.141592
@@ -93,7 +109,7 @@ typedef struct			s_sphere
 
 t_color					color_rgba(t_uchar r, t_uchar g, t_uchar b, t_uchar a);
 int						color_hex(t_color col);
-t_color					color_ray(t_ray_result *ray);
+int						color_ray(t_ray_result *ray, t_material *material);
 
 t_vec3					viewplane_point(t_vec2 uv, t_engine *e);
 t_camera				*camera_init(t_engine *e, t_vec3 pos, t_vec3 lookat);
