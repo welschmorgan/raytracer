@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 08:45:10 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/14 19:06:59 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/16 03:47:03 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ int						engine_init(t_engine *e,
 	e->img.width = width;
 	e->img.height = height;
 	camera_init(e,
-				vec3_create(0.0f, 0.0f, 0.0f),
-				vec3_create(0.0f, 0.0f, -100.0f));
+				vec3_create(0.0f, 0.0f, 10.0f),
+				vec3_create(0.0f, 0.0f, 0.0f));
 	mlx_expose_hook(e->win, on_expose, e);
 	mlx_key_hook(e->win, on_key_press, e);
 	return (RTE_SUCCESS);

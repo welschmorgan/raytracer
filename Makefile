@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/01/14 01:31:26 by mwelsch           #+#    #+#              #
-#    Updated: 2014/02/15 01:19:37 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/02/16 03:26:04 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -88,6 +88,9 @@ $(OBJ_DEBUG_DIR)/%.o: src/%.c
 	@printf "\r\033[KCompiling $<"
 	@$(CC_D) -c -o $@ $< $(INCLUDE)
 
+run: debug release
+	./rtv1
+
 clean:
 	@echo Removing object files
 	@$(RM) $(UNITS_O)
@@ -100,6 +103,6 @@ fclean: clean
 
 re: fclean all
 
-me: all clean
+me: fclean all clean run
 
-.PHONY: all clean fclean re debug release
+.PHONY: all clean fclean re debug release run

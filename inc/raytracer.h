@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 05:43:55 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/15 23:48:13 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/16 02:37:50 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,20 @@ typedef struct			s_color
 }						t_color;
 
 /*
+** Viewplane structure:
+**  holds viewplane infos
+*/
+typedef struct			s_viewplane
+{
+	t_vec3				position;
+	t_real				distance;
+	t_real				width;
+	t_real				height;
+}						t_viewplane;
+
+/*
 ** Camera structure:
-**	a point of view of the scene
+**  a point of view of the scene
 */
 typedef struct			s_camera
 {
@@ -52,8 +64,9 @@ typedef struct			s_camera
 	t_vec3				direction;
 	t_real				fovx;
 	t_real				fovy;
-	t_real				ncPlane;
-	t_real				fcPlane;
+	t_vec3				up;
+	t_vec3				right;
+	t_viewplane			viewplane;
 }						t_camera;
 
 /*
@@ -112,6 +125,7 @@ int						color_hex(t_color col);
 int						color_ray(t_ray_result *ray, t_material *material);
 
 t_vec3					viewplane_point(t_vec2 uv, t_engine *e);
+t_camera				*camera_update_viewplane(t_engine *e);
 t_camera				*camera_init(t_engine *e, t_vec3 pos, t_vec3 lookat);
 void					camera_lookat(t_engine *e, t_vec3 lookat);
 
