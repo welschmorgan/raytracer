@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 05:43:55 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/16 02:37:50 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/16 08:29:05 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,6 @@ typedef struct			s_image
 	int					endian;
 }						t_image;
 
-typedef struct			s_color
-{
-	t_uchar				a;
-	t_uchar				r;
-	t_uchar				g;
-	t_uchar				b;
-}						t_color;
-
 /*
 ** Viewplane structure:
 **  holds viewplane infos
@@ -53,6 +45,7 @@ typedef struct			s_viewplane
 	t_real				width;
 	t_real				height;
 }						t_viewplane;
+
 
 /*
 ** Camera structure:
@@ -107,6 +100,28 @@ typedef struct			s_sphere
 	t_material			*material;
 }						t_sphere;
 
+/*
+** Light type enum:
+*/
+typedef enum			e_ltype
+{
+	LT_POINT,
+	LT_SPOT,
+	LT_DIR
+}						t_ltype;
+
+/*
+** Light structure:
+**  holds infos about a source of light
+*/
+typedef struct			s_light
+{
+	t_vec3				position;
+	t_vec3				direction;
+	t_ltype				type;
+	t_material			*material;
+}						t_light;
+
 typedef enum			e_color_part
 {
 	ALPHA,
@@ -115,12 +130,20 @@ typedef enum			e_color_part
 	BLUE
 }						t_color_part;
 
+typedef struct			s_color
+{
+	t_real				r;
+	t_real				g;
+	t_real				b;
+	t_real				a;
+}						t_color;
+
 # ifndef PI
 #  define PI 3.141592
 # endif
 
-
-t_color					color_rgba(t_uchar r, t_uchar g, t_uchar b, t_uchar a);
+t_color					color_uchar(t_uchar r, t_uchar g, t_uchar b, t_uchar a);
+t_color					color_create(t_real r, t_real g, t_real b, t_real a);
 int						color_hex(t_color col);
 int						color_ray(t_ray_result *ray, t_material *material);
 
@@ -138,10 +161,14 @@ int						engine_init(t_engine *e,
 									unsigned int width,
 									unsigned int height,
 									char *title);
+
+t_vec3					sphere_normal(t_sphere *sphere,
+									  t_vec3 pt);
+
 int						collision_test_point(t_vec3 p1, t_vec3 p2,
 											 t_real radius);
-int						collision_test_sphere(t_vec3 point,
-											  t_sphere sphere);
+int						collision_test_sphere(t_ray_result *res,
+											  t_sphere *sphere);
 
 
 #endif /* !RAYTRACER_H */

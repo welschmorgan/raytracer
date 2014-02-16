@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 08:56:55 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/16 06:50:27 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/16 08:56:11 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "raytracer.h"
@@ -20,11 +20,18 @@
 #define RAY_STEP			0.1
 
 static t_material		g_material_base = {
-	{1.0f, 1.0f, 1.0f, 1.0f},
-	{1.0f, 0.2f, 0.2f, 0.2f},
-	{1.0f, 0.3f, 0.3f, 0.3f},
-	45.0f
+	{1.0f, 1.0f, 1.0f, 1.0f}, {1.0f, 0.2f, 0.2f, 0.2f},
+	{1.0f, 0.3f, 0.3f, 0.3f}, 45.0f
 };
+
+static t_material		g_material_light = {
+	{1.0f, 1.0f, 1.0f, 1.0f}, {1.0f, 1.0f, 1.0f, 1.0f},
+	{1.0f, 1.0f, 1.0f, 1.0f}, 45.0f
+};
+static t_light			g_light = {
+	{1.0f, 10.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, LT_POINT, &g_material_light
+};
+
 static t_sphere			g_spheres[SPHERE_COUNT] = {
 	{1.0f, {0.0f, 0.5f, 0.0f}, &g_material_base}
 };
@@ -44,40 +51,6 @@ t_vec3					get_viewplane_pixel(t_vec2 pixel, t_engine *e)
 	return (ret);
 }
 
-int						collision_test_sphere2(t_ray_result *r,
-											   t_sphere *sphere)
-{
-	t_real				a;
-	t_real				b;
-	t_real				c;
-	t_real				det;
-
-	a = (r->ray.direction.x * r->ray.direction.x)
-		+ (r->ray.direction.y * r->ray.direction.y)
-		+ (r->ray.direction.z * r->ray.direction.z);
-	b = 2.0 * (r->ray.direction.x * (r->ray.origin.x - sphere->position.x)
-			 + r->ray.direction.y * (r->ray.origin.y - sphere->position.y)
-			 + r->ray.direction.z * (r->ray.origin.z - sphere->position.z));
-	c = ((r->ray.origin.x - sphere->position.x)
-		 * (r->ray.origin.x - sphere->position.x))
-		+ ((r->ray.origin.y - sphere->position.y)
-		   * (r->ray.origin.y - sphere->position.y))
-		+ ((r->ray.origin.z - sphere->position.z)
-		   * (r->ray.origin.z - sphere->position.z))
-		- sphere->radius * sphere->radius;
-	det = (b * b) - (4 * a * c);
-	if (!det)
-		r->distance = -(b / 2 * a);
-	else if (det > 0)
-	{
-		r->distance = FT_MIN((-b - sqrt(det)) / (2 * a),
-							 (-b + sqrt(det)) / (2 * a));
-	}
-	else
-		return (0);
-	return (1);
-}
-
 int						check_intersects(t_engine *e, t_ray_result *res)
 {
 	int					i;
@@ -92,10 +65,10 @@ int						check_intersects(t_engine *e, t_ray_result *res)
 	while (i < SPHERE_COUNT)
 	{
 		cur = &g_spheres[i];
-		if (collision_test_sphere2(res, cur))
+		if (collision_test_sphere(res, cur))
 		{
 			res->hit = 1;
-			res->data = (void*)cur->material;
+			res->data = (void*)cur;
 			return (1);
 		}
 		i++;
@@ -135,44 +108,77 @@ void					progress_status(t_engine *e,
 			  (int)telapsed);
 }
 
+typedef struct			s_renderer
+{
+	t_vec2				pixel;
+	t_ray_result		result;
+	t_engine			*engine;
+}						t_renderer;
+
+t_renderer				*renderer_init(t_renderer *r, t_engine *e)
+{
+	if (r)
+	{
+		r->engine = e;
+		r->pixel = vec2_create(0.0f, 0.0f);
+		r->result = ray_result_create(0,
+									  ray_create(e->cam.position,
+												 vec3_sub(
+													 get_viewplane_pixel(
+														 r->pixel,
+														 e),
+													 e->cam.position)),
+									  0.0f,
+									  NULL);
+	}
+	return (r);
+}
+
+t_renderer				*renderer_update(t_renderer *r)
+{
+	t_vec3				vp;
+	t_ray				ray;
+	int					col;
+
+	if (!r)
+		return (r);
+	vp = get_viewplane_pixel(renderer.pixel, r->engine);
+	ray.origin = r->engine->cam.position;
+	ray.direction = vec3_sub(vp, e->cam.position);
+	r->result = shoot_ray(e, ray);
+	col = color_hex(color_add(renderer_pass_ambient(r),
+							  renderer_pass_diffuse(r));
+	image_set_pixel(e, v.x, v.y, col);
+	return (r);
+}
+
 int						render_image(t_engine *e)
 {
-	t_vec2				v;
-	t_ray				ray;
+	t_renderer			renderer;
 	t_vec3				tmp;
-	t_ray_result		res;
-	float				progress;
 
-	v.y = 0.0f;
+	renderer_init(&renderer, e);
 	e->img.data = mlx_get_data_addr(e->img.ptr,
 									&e->img.bpp,
 									&e->img.size_line,
 									&e->img.endian);
-	ray.origin = e->cam.position;
 	progress_status(e, 0.0f, (clock() - tbegin) / CLOCKS_PER_SEC);
 	tbegin = clock();
-	while (v.y < (t_real)e->img.height)
+	while (renderer.pixel.y < (t_real)e->img.height)
 	{
-		v.x = 0.0f;
-		time_spent = (double)(clock() - tbegin) / CLOCKS_PER_SEC;
-		progress = v.y / (float)e->img.height;
-		progress_status(e, progress * 100.0f,
+		renderer.pixel.x = 0.0f;
+		progress_status(e, ((float)v.y / (float)e->img.height) * 100.0f,
 						(clock() - tbegin) / CLOCKS_PER_SEC);
-		while (v.x < (t_real)e->img.width)
+		while (renderer.pixel.x < (t_real)e->img.width)
 		{
-			tmp = get_viewplane_pixel(v, e);
-			ray.direction = vec3_sub(tmp, e->cam.position);
-			res = shoot_ray(e, ray);
-			image_set_pixel(e, v.x, v.y,
-							color_ray(&res, (t_material*)res.data));
+			renderer_update(&renderer);
 			v.x++;
 		}
 		v.y++;
 	}
-	tend = clock();
-	time_spent = (double)(tend - tbegin) / CLOCKS_PER_SEC;
 	progress_status(e, 100.0f, (clock() - tbegin) / CLOCKS_PER_SEC);
-	ft_printf("\n[render:%4ix%4i - %i obj(s)]:\tuploading to video memory: ",
+	ft_printf("\n[render:%4ix%4i - %i obj(s)]:\t%i %% - "
+			  "uploading to video memory: ",
 			  e->img.width, e->img.height, SPHERE_COUNT);
 	mlx_put_image_to_window(e->core, e->win, e->img.ptr, 0, 0);
 	printf("done\n");

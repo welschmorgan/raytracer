@@ -14,28 +14,40 @@
 #include <libft_printf.h>
 #include <libft_converters.h>
 
-int					collision_test_sphere(t_vec3 p, t_sphere sphere)
+int						collision_test_sphere(t_ray_result *r,
+											t_sphere *sphere)
 {
-	int					v[3];
+	t_real				a;
+	t_real				b;
+	t_real				c;
+	t_real				det;
 
-	v[VEC_X] = p.x >= sphere.position.x
-		&& p.x <= (sphere.position.x + sphere.radius);
-	v[VEC_Y] = p.y >= sphere.position.y
-		&& p.y <= (sphere.position.y + sphere.radius);
-	v[VEC_Z] = p.z >= sphere.position.z
-		&& p.z <= (sphere.position.z + sphere.radius);
-/*	if (v[0] && v[1] && v[2])
-		printf("Point (%4.2f, %4.2f, %4.2f) "
-			   "inside sphere (%4.2f, %4.2f, %4.2f):%4.2f.\n"
-			   "\t(%s, %s, %s)\n",
-			   p.x, p.y, p.z,
-			   sphere.position.x, sphere.position.y, sphere.position.z,
-			   sphere.radius,
-			   v[VEC_X] ? "true" : "false",
-			   v[VEC_Y] ? "true" : "false",
-			   v[VEC_Z] ? "true" : "false");*/
-	return (v[VEC_X] && v[VEC_Y] && v[VEC_Z]);
+	a = (r->ray.direction.x * r->ray.direction.x)
+		+ (r->ray.direction.y * r->ray.direction.y)
+		+ (r->ray.direction.z * r->ray.direction.z);
+	b = 2.0 * (r->ray.direction.x * (r->ray.origin.x - sphere->position.x)
+			 + r->ray.direction.y * (r->ray.origin.y - sphere->position.y)
+			 + r->ray.direction.z * (r->ray.origin.z - sphere->position.z));
+	c = ((r->ray.origin.x - sphere->position.x)
+		 * (r->ray.origin.x - sphere->position.x))
+		+ ((r->ray.origin.y - sphere->position.y)
+		   * (r->ray.origin.y - sphere->position.y))
+		+ ((r->ray.origin.z - sphere->position.z)
+		   * (r->ray.origin.z - sphere->position.z))
+		- sphere->radius * sphere->radius;
+	det = (b * b) - (4 * a * c);
+	if (!det)
+		r->distance = -(b / 2 * a);
+	else if (det > 0)
+	{
+		r->distance = FT_MIN((-b - sqrt(det)) / (2 * a),
+							 (-b + sqrt(det)) / (2 * a));
+	}
+	else
+		return (0);
+	return (1);
 }
+
 
 int					collision_test_point(t_vec3 p1, t_vec3 p2, t_real radius)
 {
