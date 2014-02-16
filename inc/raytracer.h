@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 05:43:55 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/16 10:24:01 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/16 14:29:47 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <libmath.h>
 # include "renderer.h"
 # include "camera.h"
+# include "scene.h"
+
 # define VEC_X			0
 # define VEC_Y			1
 # define VEC_Z			2
@@ -47,6 +49,7 @@ typedef struct			s_engine
 	t_renderer			*renderer;
 	t_image				img;
 	t_camera			cam;
+	t_scene				scene;
 }						t_engine;
 
 typedef enum			e_rt_error
@@ -78,6 +81,7 @@ t_vec3					sphere_normal(t_sphere *sphere,
 
 int						collision_test_sphere(t_ray_result *res,
 											  t_sphere *sphere);
-
+int						collision_test_plane(t_ray_result *result,
+											 t_plane *plane);
 
 #endif /* !RAYTRACER_H */

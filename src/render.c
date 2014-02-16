@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 08:56:55 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/16 09:44:01 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/16 12:35:29 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "raytracer.h"
@@ -51,6 +51,6 @@ int						render_image(t_engine *e)
 			  "uploading to video memory: ",
 			  e->img.width, e->img.height);
 	mlx_put_image_to_window(e->core, e->win, e->img.ptr, 0, 0);
-	printf("done\n");
+	ft_printf("done\n");
 	return (1);
 }
