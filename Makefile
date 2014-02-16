@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/01/14 01:31:26 by mwelsch           #+#    #+#              #
-#    Updated: 2014/02/16 03:26:04 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/02/16 11:27:17 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -16,7 +16,10 @@ SRC_DIR		= ./src
 OBJ_DEBUG_DIR = $(OBJ_DIR)/debug
 OBJ_RELEASE_DIR = $(OBJ_DIR)/release
 
-SRC			= main.c engine.c render.c camera.c color.c collision.c
+SRC			= main.c engine.c render.c camera.c collision.c \
+				renderer.c renderer_init.c \
+				color_hex.c color_add.c color_sub.c color_mul.c color_div.c \
+				color_scale.c color_uchar.c color_create.c
 OBJ			= $(SRC:.c=.o)
 UNITS		= $(patsubst %, $(SRC_DIR)/%, $(SRC))
 UNITS_O		= $(patsubst %, $(OBJ_RELEASE_DIR)/%, $(OBJ))
@@ -45,8 +48,8 @@ INCLUDE		=  -Iinc -I$(LIBFT_INC) -I$(LIBMATH_INC) -I/usr/include/X11
 NAME		= rtv1
 NAME_D		= $(NAME)_d
 
-FLAGS		= -W -Wall -Werror -ansi -std=c89 -pedantic -Qunused-arguments \
-				$(INCLUDE)
+FLAGS		= -Wall -Werror -Wextra -ansi -std=c89 -pedantic \
+				-Qunused-arguments $(INCLUDE)
 CFLAGS		= $(FLAGS) -O3
 CFLAGS_D	= $(FLAGS) -ggdb -D_DEBUG
 LDFLAGS		= -L/usr/X11/lib -lXext -lX11 -lmlx -lm
