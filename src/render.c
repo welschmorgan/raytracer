@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 08:56:55 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/16 03:24:11 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/16 06:50:27 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "raytracer.h"
@@ -22,11 +22,11 @@
 static t_material		g_material_base = {
 	{1.0f, 1.0f, 1.0f, 1.0f},
 	{1.0f, 0.2f, 0.2f, 0.2f},
-	{1.0f, 0.1f, 0.1f, 0.1f},
+	{1.0f, 0.3f, 0.3f, 0.3f},
 	45.0f
 };
 static t_sphere			g_spheres[SPHERE_COUNT] = {
-	{4.0f, {0.0f, 0.5f, 0.0f}, &g_material_base}
+	{1.0f, {0.0f, 0.5f, 0.0f}, &g_material_base}
 };
 
 t_vec3					get_viewplane_pixel(t_vec2 pixel, t_engine *e)
