@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:14:01 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/18 00:27:28 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/19 03:11:11 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <math.h>
@@ -67,6 +67,7 @@ int						collision_test_object(t_renderer *r,
 		return (0);
 	res->hit = OT_NONE;
 	res->contact.data = obj;
+	ft_printf("Testing object %s\n", obj->name);
 	if (obj->type == OT_SPHERE)
 	{
 		if (collision_test_sphere(res, obj->data->sphere))
