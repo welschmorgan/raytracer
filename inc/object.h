@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/18 04:13:49 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/19 01:41:08 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/19 13:05:49 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef OBJECT_H
@@ -25,7 +25,6 @@ typedef struct			s_plane
 {
 	t_normal			normal;
 	t_vec3				point;
-	t_material			*material;
 	struct s_object		*object;
 }						t_plane;
 
@@ -38,7 +37,6 @@ typedef struct			s_sphere
 {
 	t_real				radius;
 	t_vec3				position;
-	t_material			*material;
 	struct s_object		*object;
 }						t_sphere;
 
@@ -71,7 +69,6 @@ typedef struct			s_light
 	t_vec3				position;
 	t_vec3				direction;
 	t_ltype				type;
-	t_material			*material;
 	struct s_object		*object;
 }						t_light;
 

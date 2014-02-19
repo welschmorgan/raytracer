@@ -6,12 +6,13 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/17 20:02:48 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/19 01:16:33 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/19 15:44:20 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "scene.h"
 #include <libft_string.h>
 #include <libft_memory.h>
+#include <libft_printf.h>
 
 char					*objtype_type2str(t_objtype t)
 {
@@ -42,6 +43,21 @@ t_objtype				objtype_str2type(char * str)
 	return (OT_NONE);
 }
 
+t_normal				object_normal(t_object *o, t_vec3 contact)
+{
+	t_normal			ret;
+
+	ret = vec3_zero();
+	if (!o)
+		return (ret);
+	if (o->type == OT_SPHERE)
+		ret = vec3_sub(contact, o->data->sphere->position);
+	else if (o->type == OT_PLANE)
+		ret = o->data->plane->normal;
+	vec3_norm(&ret);
+	return (ret);
+}
+
 t_object				*object_init(t_object *o,
 									 const char *name,
 									 t_objtype type,
@@ -50,6 +66,8 @@ t_object				*object_init(t_object *o,
 	if (o)
 	{
 		ft_strncpy(o->name, name, OBJECT_NAME_LENGTH);
+		ft_printf("object '%s' material: %s\n", name,
+				  mat ? mat->name : "invalid");
 		o->type = type;
 		o->data = objdata_create(o, type);
 		o->material = mat;
@@ -63,14 +81,16 @@ t_object				*object_create(const char *name,
 {
 	t_object			*ret;
 
+	ft_printf("[create] object '%s'\n", name);
 	ret = (t_object*)ft_memalloc(sizeof(t_object));
 	return (object_init(ret, name, type, mat));
 }
 
 void					object_destroy(t_object **obj)
 {
-	if (obj)
+	if (obj && *obj)
 	{
+		ft_printf("[destroy] object '%s'\n", (*obj)->name);
 		objdata_destroy((t_objdata**)&(*obj)->data);
 		ft_memdel((void**)obj);
 	}

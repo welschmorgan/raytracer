@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/01/14 01:31:26 by mwelsch           #+#    #+#              #
-#    Updated: 2014/02/18 06:47:58 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/02/19 15:54:42 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -18,7 +18,8 @@ OBJ_RELEASE_DIR = $(OBJ_DIR)/release
 
 SRC			= main.c engine.c render.c camera.c \
 				collision.c collision_sphere.c \
-				renderer.c renderer_init.c renderer_shoot.c\
+				renderer.c renderer_init.c renderer_shoot.c \
+				renderer_lighting.c \
 				sphere.c \
 				material.c \
 				image.c \
@@ -64,7 +65,7 @@ CC			= clang $(CFLAGS)
 CC_D		= clang $(CFLAGS_D)
 
 
-all: debug release
+all: $(NAME) $(NAME_D)
 
 debug: $(NAME_D)
 release: $(NAME)
@@ -110,8 +111,13 @@ fclean: clean
 	@$(RM) $(NAME)
 	@$(RM) $(NAME_D)
 
+lclean:
+	@echo Cleaning libraries
+	@make fclean -s -C libft
+	@make fclean -s -C libft
+
 re: fclean all
 
 me: fclean all clean run
 
-.PHONY: all clean fclean re debug release run
+.PHONY: all clean fclean re debug release run me lclean

@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 19:14:01 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/19 03:11:11 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/19 15:07:15 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <math.h>
@@ -36,6 +36,9 @@ int						collision_test_sphere(t_ray_result *r,
 							 (-b + sqrt(det)) / (2 * a));
 	else
 		return (0);
+	r->hit = OT_SPHERE;
+	r->contact.point = vec3_add(r->ray.origin,
+								vec3_scale(r->ray.direction, r->distance));
 	return (1);
 }
 
@@ -43,19 +46,19 @@ int						collision_test_plane(t_ray_result *result,
 											 t_plane *plane)
 {
 	t_vec3				opp;
-	t_real				t;
 	t_real				dv;
 
 	opp = vec3_sub(result->ray.origin, plane->point);
 	dv = vec3_dot(plane->normal, result->ray.direction);
 	if (!dv)
 		return (0);
-	t = -vec3_dot(plane->normal, opp) / dv;
-	if (t < 0)
+	result->distance = -vec3_dot(plane->normal, opp) / dv;
+	if (result->distance < 0)
 		return (0);
-	result->distance = t;
+	result->hit = OT_PLANE;
 	result->contact.point = vec3_add(result->ray.origin,
-									 vec3_scale(result->ray.direction, t));
+									 vec3_scale(result->ray.direction,
+												result->distance));
 	return (1);
 }
 
@@ -67,16 +70,9 @@ int						collision_test_object(t_renderer *r,
 		return (0);
 	res->hit = OT_NONE;
 	res->contact.data = obj;
-	ft_printf("Testing object %s\n", obj->name);
 	if (obj->type == OT_SPHERE)
-	{
-		if (collision_test_sphere(res, obj->data->sphere))
-			res->hit = OT_SPHERE;
-	}
+		return (collision_test_sphere(res, obj->data->sphere));
 	else if (obj->type == OT_PLANE)
-	{
-		if (collision_test_plane(res, obj->data->plane))
-			res->hit = OT_PLANE;
-	}
-	return (res->hit);
+		return (collision_test_plane(res, obj->data->plane));
+	return (0);
 }
