@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/19 15:45:41 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/19 18:05:10 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/19 18:31:41 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "raytracer.h"
@@ -24,29 +24,6 @@ t_real					renderer_light_compute_angle(t_normal surf_normal,
 	ldir = vec3_sub(contact_pt, l->position);
 	vec3_norm(&ldir);
 	return (vec3_dot(surf_normal, vec3_scale(ldir, -1.0f)));
-}
-
-t_vec3					vec3_reflect(t_vec3 incident, t_normal normal)
-{
-	return (vec3_sub(incident,
-					 vec3_scale(normal, 2.0f * vec3_dot(incident, normal))));
-}
-/*
-** eta is the refraction index (e.g 1.5f)
-*/
-t_vec3					vec3_refract(t_vec3 incident,
-									 t_normal normal,
-									 t_real eta)
-{
-	t_real				ndotl;
-	t_real				k;
-
-	ndotl = vec3_dot(incident, normal);
-	k = 1.0f - eta * eta * (1.0f - ndotl * ndotl);
-	if (k < 0.0f)
-		return (vec3_create(0.0f, 0.0f, 0.0f));
-	return (vec3_sub(vec3_scale(incident, eta),
-					 vec3_scale(normal, eta * ndotl + sqrt(k))));
 }
 
 t_color					color_pow(t_color c, t_uint pow)
