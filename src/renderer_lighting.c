@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/19 15:45:41 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/19 18:31:41 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/19 18:44:40 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "raytracer.h"
@@ -51,7 +51,7 @@ static t_color			final_lighting(t_material *surf, t_material *light,
 								angle);
 	final.specular = color_scale(color_mul(light->specular, surf->specular),
 							   refl);
-	return (color_add(color_add(final.diffuse, surf->ambient), final.specular));
+	return (color_mul(color_add(final.diffuse, surf->ambient), final.specular));
 }
 
 t_real					renderer_light_compute_reflection(t_renderer *r,
