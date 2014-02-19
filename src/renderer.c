@@ -6,86 +6,78 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/16 09:18:03 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/16 21:35:59 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/18 03:43:41 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "raytracer.h"
 #include <stddef.h>
 
-t_color					renderer_pass_ambient(t_renderer *r)
+t_real					renderer_light_compute_angle(t_normal surf_normal,
+													 t_vec3 contact_pt,
+													 t_light *l)
 {
-	t_color				c;
-	t_sphere			*sphere;
-	t_plane				*plane;
+	t_vec3				ldir;
 
-	(void)r;
-	c = color_create(0.1f, 0.1f, 0.1f, 1.0f);
-	if (r->result.hit)
-	{
-		if (r->result.hit == 2)
-		{
-			plane = (t_plane*)r->result.data;
-			c = plane->material->ambient;
-		}
-		else
-		{
-			sphere = (t_sphere*)r->result.data;
-			c = sphere->material->ambient;
-		}
-	}
-	else
-		c.b = 1.0f;
-	return (c);
+	if (!l)
+		return (0.0f);
+	ldir = vec3_sub(contact_pt, l->position);
+	vec3_norm(&ldir);
+	return (vec3_dot(surf_normal, vec3_scale(ldir, -1.0f)));
 }
 
-t_color					light_at(t_renderer *r, t_light *l)
+t_color					renderer_light_compute(t_renderer *r, t_light *l)
 {
-	t_ray				lightr;
-	t_vec3				contact;
-	t_vec3				contact_n;
-	t_color				c;
+	t_object			*obj;
 	t_real				angle;
 	t_material			*material;
+	t_ray_contact		*contact;
 
-	c = color_create(0.0f, 0.0f, 0.0f, 0.0f);
-	contact = vec3_add(r->result.ray.origin,
-					   vec3_scale(r->result.ray.direction,
-								  r->result.distance));
-	lightr.origin = l->position;
-	lightr.direction = vec3_sub(contact, l->position);
-	vec3_norm(&lightr.direction);
 	if (r->result.hit)
 	{
-		if (r->result.hit == 2)
-			contact_n = ((t_plane*)r->result.data)->normal;
-		else
-			contact_n = sphere_normal(((t_sphere*)r->result.data), contact);
-		angle = vec3_dot(contact_n, vec3_create(-lightr.direction.x,
-										-lightr.direction.y,
-										-lightr.direction.z));
+		obj = ((t_object*)r->result.contact.data);
+		contact = &r->result.contact;
+		angle = 0.0f;
+		if (obj->type == OT_SPHERE)
+			angle = renderer_light_compute_angle(sphere_normal(
+													 obj->data->sphere,
+													 contact->point),
+												 contact->point,
+								l);
+		else if (obj->type == OT_PLANE)
+			angle = renderer_light_compute_angle(obj->data->plane->normal,
+												 contact->point,
+												 l);
 		if (angle > 0)
 		{
-			if (r->result.hit == 2)
-				material = ((t_plane*)r->result.data)->material;
-			else
-				material = ((t_sphere*)r->result.data)->material;
-			if (material)
-				c = color_scale(color_mul(material->diffuse,
+			if (obj->type == OT_PLANE)
+				material = obj->data->plane->material;
+			else if (obj->type == OT_SPHERE)
+				material = obj->data->sphere->material;
+			return (color_scale(color_mul(material->diffuse,
 										  l->material->diffuse),
-								angle);
+								angle));
 		}
+	}
+	return (color_create(0.0f, 0.0f, 0.0f, 0.0f));
+}
+
+t_color					renderer_light_compute_list(t_renderer *r, t_dlist *lst)
+{
+	t_color				c;
+	t_dnode				*l;
+
+	c = color_create(0.0f, 0.0f, 0.0f, 1.0f);
+	if (!lst)
+		return (c);
+	l = lst->tail;
+	while (l && l != lst->head)
+	{
+		c = color_add(c, renderer_light_compute(r, ((t_light*)l->data)));
+		l = l->next;
 	}
 	return (c);
 }
 
-t_color					renderer_pass_diffuse(t_renderer *r)
-{
-	t_color				c;
-
-	(void)r;
-	c = color_create(0.0f, 0.0f, 0.0f, 1.0f);
-	return (c);
-}
 
 t_renderer				*renderer_update(t_renderer *r)
 {
@@ -96,12 +88,10 @@ t_renderer				*renderer_update(t_renderer *r)
 	if (!r)
 		return (r);
 	vp = camera_viewplane_point(r->engine, r->pixel);
-	ray.origin = r->engine->cam.position;
-	ray.direction = vec3_sub(vp, r->engine->cam.position);
+	ray.origin = r->engine->cam->position;
+	ray.direction = vec3_sub(vp, r->engine->cam->position);
 	r->result = renderer_shoot(r, ray);
-	col = color_hex(light_at(r, r->engine->scene.lights));
-/*color_add(renderer_pass_ambient(r),
-					  renderer_pass_diffuse(r))*/
+	col = color_hex(renderer_light_compute_list(r, r->engine->scene->lights));
 	image_set_pixel(r->engine, r->pixel.x, r->pixel.y, col);
 	return (r);
 }

@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 08:56:55 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/16 12:35:29 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/18 00:06:24 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "raytracer.h"
@@ -21,7 +21,7 @@ void					progress_status(t_engine *e,
 										float telapsed)
 {
 	ft_printf("\r[render:%ix%i]\t%i %% - %i seconds.",
-			  e->img.width, e->img.height,
+			  e->img->width, e->img->height,
 			  (int)progress,
 			  (int)telapsed);
 }
@@ -33,13 +33,13 @@ int						render_image(t_engine *e)
 	renderer_init(&renderer, e);
 	progress_status(e, 0.0f, (clock() - tbegin) / CLOCKS_PER_SEC);
 	tbegin = clock();
-	while (renderer.pixel.y < (t_real)e->img.height)
+	while (renderer.pixel.y < (t_real)e->img->height)
 	{
 		renderer.pixel.x = 0.0f;
 		progress_status(e, ((float)renderer.pixel.y
-							/ (float)e->img.height) * 100.0f,
+							/ (float)e->img->height) * 100.0f,
 						(clock() - tbegin) / CLOCKS_PER_SEC);
-		while (renderer.pixel.x < (t_real)e->img.width)
+		while (renderer.pixel.x < (t_real)e->img->width)
 		{
 			renderer_update(&renderer);
 			renderer.pixel.x++;
@@ -49,8 +49,8 @@ int						render_image(t_engine *e)
 	progress_status(e, 100.0f, (clock() - tbegin) / CLOCKS_PER_SEC);
 	ft_printf("\n[render:%ix%i]:\t%i %% - "
 			  "uploading to video memory: ",
-			  e->img.width, e->img.height);
-	mlx_put_image_to_window(e->core, e->win, e->img.ptr, 0, 0);
+			  e->img->width, e->img->height);
+	mlx_put_image_to_window(e->core, e->win, e->img->ptr, 0, 0);
 	ft_printf("done\n");
 	return (1);
 }

@@ -1,0 +1,34 @@
+material base_material
+{
+	diffuse		0.0 0.0 0.0 1.0
+	specular	0.0 0.0 0.0 45.0
+	ambient		0.0 0.0 0.0 1.0
+}
+
+material floor_material
+{
+	diffuse		1.0 0.0 0.0 1.0
+	specular	0.0 0.0 0.0 45.0
+	ambient		0.0 0.0 0.0 1.0
+}
+
+light light0
+{
+	type point
+	position 10.0 100.0 10.0
+	direction -1.0 -1.0 -1.0
+}
+
+object sphere0
+{
+	type sphere
+	position 0.0 0.0 0.0
+	radius 15.0
+}
+
+object floor
+{
+	type plane
+	normal 0.0 1.0 0.0
+	point 10.0 -1.0 10.0
+}

@@ -6,7 +6,7 @@
 #    By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/01/14 01:31:26 by mwelsch           #+#    #+#              #
-#    Updated: 2014/02/16 21:36:22 by mwelsch          ###   ########.fr        #
+#    Updated: 2014/02/18 06:47:58 by mwelsch          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -16,10 +16,14 @@ SRC_DIR		= ./src
 OBJ_DEBUG_DIR = $(OBJ_DIR)/debug
 OBJ_RELEASE_DIR = $(OBJ_DIR)/release
 
-SRC			= main.c engine.c render.c camera.c collision.c \
+SRC			= main.c engine.c render.c camera.c \
+				collision.c collision_sphere.c \
 				renderer.c renderer_init.c renderer_shoot.c\
 				sphere.c \
-				scene.c \
+				material.c \
+				image.c \
+				objects.c objdata.c \
+				scene.c scene_parser.c scene_parser_env.c scene_destroy.c \
 				color_hex.c color_add.c color_sub.c color_mul.c color_div.c \
 				color_scale.c color_uchar.c color_create.c
 OBJ			= $(SRC:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/16 10:16:27 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/16 10:26:15 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/18 00:16:00 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CAMERA_H
@@ -47,13 +47,16 @@ typedef struct			s_camera
 	t_viewplane			viewplane;
 }						t_camera;
 
+void					camera_destroy(t_camera **e);
+t_camera				*camera_init(t_camera *cam, struct s_engine *e,
+									 t_vec3 pos, t_vec3 lookat);
+t_camera				*camera_new(struct s_engine *e,
+									t_vec3 pos,
+									t_vec3 lookat);
 t_vec3					camera_viewplane_point(struct s_engine *e,
 											   t_vec2 pixel);
-t_camera				*camera_update_viewplane(struct s_engine *e);
-t_camera				*camera_init(struct s_engine *e,
-									 t_vec3 pos,
-									 t_vec3 lookat);
-void					camera_lookat(struct s_engine *e,
+t_camera				*camera_update_viewplane(t_camera *e);
+void					camera_lookat(t_camera *e,
 									  t_vec3 lookat);
 
 #endif /* !CAMERA_H */

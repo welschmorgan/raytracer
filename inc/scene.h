@@ -6,61 +6,43 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/16 13:30:21 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/16 14:34:44 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/19 01:26:08 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef SCENE_H
 # define SCENE_H
 
 # include <libmath_vec3.h>
+# include <libft_dlist.h>
+# include <scene_parser.h>
 # include "material.h"
 
+typedef enum			e_color_id
+{
+	CLR_BLACK,
+	CLR_WHITE,
+	CLR_RED,
+	CLR_GREEN,
+	CLR_BLUE,
+	CLR_MAGENTA,
+	CLR_CYAN,
+	CLR_YELLOW,
+	CLR_COUNT
+}						t_color_id;
+
+typedef enum			e_material_id
+{
+	MTL_DEFAULT,
+	MTL_FLOOR,
+	MTL_SPHERES,
+	MTL_LIGHT,
+	MTL_COUNT
+}						t_material_id;
+
+extern const t_color	g_colors[CLR_COUNT];
+extern const t_material	g_materials[MTL_COUNT];
+
 struct					s_renderer;
-/*
-** Plane structure:
-**  represents a 3d plane
-*/
-typedef struct			s_plane
-{
-	t_normal			normal;
-	t_vec3				point;
-	t_material			*material;
-}						t_plane;
-
-/*
-** Sphere structure:
-**  represents a sphere, with a position, a radius,
-**  and a material
-*/
-typedef struct			s_sphere
-{
-	t_real				radius;
-	t_vec3				position;
-	t_material			*material;
-}						t_sphere;
-
-/*
-** Light type enum:
-**  not supported yet
-*/
-typedef enum			e_ltype
-{
-	LT_POINT,
-	LT_SPOT,
-	LT_DIR
-}						t_ltype;
-
-/*
-** Light structure:
-**  holds infos about a source of light.
-*/
-typedef struct			s_light
-{
-	t_vec3				position;
-	t_vec3				direction;
-	t_ltype				type;
-	t_material			*material;
-}						t_light;
 
 /*
 ** Scene structure:
@@ -68,15 +50,49 @@ typedef struct			s_light
 */
 typedef struct			s_scene
 {
-	t_sphere			*spheres;
-	t_light				*lights;
-	t_plane				*planes;
-	unsigned char		nplanes;
-	unsigned char		nlights;
-	unsigned char		nspheres;
+	t_dlist				*objects;
+	t_dlist				*lights;
+	t_dlist				*materials;
 	struct s_renderer	*renderer;
 }						t_scene;
 
+char					*objtype_type2str(t_objtype t);
+t_objtype				objtype_str2type(char * str);
+
+void					objdata_destroy(t_objdata **data);
+t_objdata				*objdata_create(struct s_object *object,
+										t_objtype type);
+t_objdata				*objdata_init(struct s_object *object,
+									  t_objdata *data, t_objtype type);
+
+t_object				*object_init(t_object *o,
+									 const char *name,
+									 t_objtype type,
+									 t_material *mat);
+t_object				*object_reset(t_object *o);
+t_object				*object_create(const char *name,
+									   t_objtype type,
+									   t_material *mat);
+void					object_destroy(t_object **obj);
+
+t_scene					*scene_create(struct s_renderer *r);
 t_scene					*scene_init(t_scene *scn, struct s_renderer *r);
+void					scene_material_destroy(t_dnode *n);
+void					scene_light_destroy(t_dnode *n);
+void					scene_object_destroy(t_dnode *obj);
+void					scene_destroy(t_scene **scn);
+void					scene_clear(t_scene *scn);
+t_object				*scene_object_add(t_scene *scn, t_object *obj);
+t_light					*scene_create_light(t_scene *scn,
+											t_ltype type,
+											t_vec3 pos,
+											t_material *mat);
+t_material				*scene_create_material(t_scene *scn, char *name);
+t_sphere				*scene_create_sphere(t_scene *scn, char *name,
+											 t_material *mat);
+t_plane					*scene_create_plane(t_scene *scn, char *name,
+											t_material *mat);
+t_object				*scene_create_object(t_scene *scn, char *name,
+											 t_objtype type, t_material *mat);
 
 #endif /* !SCENE_H */

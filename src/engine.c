@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 08:45:10 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/16 03:47:03 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/18 03:42:05 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include "raytracer.h"
 #include <libft_printf.h>
+#include <libft_memory.h>
 
 int						on_key_press(int key, t_engine *engine)
 {
@@ -30,6 +31,28 @@ int						on_expose(t_engine *e)
 	return (1);
 }
 
+t_engine				*engine_reset(t_engine *e)
+{
+	if (e)
+	{
+		if (e->scene)
+			scene_clear(e->scene);
+	}
+	return (e);
+}
+
+void					engine_destroy(t_engine **e)
+{
+	if (e)
+	{
+		engine_reset(*e);
+		ft_memdel((void**)&(*e)->img);
+		ft_memdel((void**)&(*e)->cam);
+		ft_memdel((void**)&(*e)->scene);
+		ft_memdel((void**)e);
+	}
+}
+
 int						engine_init(t_engine *e,
 									unsigned int width,
 									unsigned int height,
@@ -40,35 +63,24 @@ int						engine_init(t_engine *e,
 	if ((e->win = mlx_new_window(e->core, width,
 								 height, title)) == NULL)
 		return (RTE_WINDOW);
-	if ((e->img.ptr = mlx_new_image(e->core, width, height)) == NULL)
+	e->img = image_create(e, width, height);
+	if (!e->img)
 		return (RTE_IMAGE);
-	e->img.width = width;
-	e->img.height = height;
-	camera_init(e,
-				vec3_create(0.0f, 0.0f, 10.0f),
-				vec3_create(0.0f, 0.0f, 0.0f));
+	e->cam = camera_new(e,
+						vec3_create(0.0f, 0.0f, 10.0f),
+						vec3_create(0.0f, 0.0f, 0.0f));
+	e->scene = scene_create(e->renderer);
 	mlx_expose_hook(e->win, on_expose, e);
 	mlx_key_hook(e->win, on_key_press, e);
 	return (RTE_SUCCESS);
 }
 
-char					*image_get_pixel(t_image *img, int x, int y)
+t_engine				*engine_create(t_uint width, t_uint height, char *title)
 {
-	if (!img || !img->data)
-		return (NULL);
-	return (img->data + (x * img->size_line + y));
-}
+	t_engine			*ret;
 
-void					image_set_pixel(t_engine *e, int x, int y, int color)
-{
-	char				*col;
-	int					pos;
-
-	pos = (x * (e->img.bpp / 8)) + (y * e->img.size_line);
-	color = mlx_get_color_value(e->core, color);
-	col = (char*)&color;
-	e->img.data[pos + 0] = col[0];
-	e->img.data[pos + 1] = col[1];
-	e->img.data[pos + 2] = col[2];
-	e->img.data[pos + 3] = col[3];
+	ret = (t_engine*)ft_memalloc(sizeof(t_engine));
+	if (engine_init(ret, width, height, title))
+		engine_destroy(&ret);
+	return (ret);
 }
