@@ -5,7 +5,7 @@ function sync_folder()
 	make fclean
 	git add .
 	git commit -am "Synchronizing Project"
-	git push
+	git push origin master
 }
 
 cd libft
