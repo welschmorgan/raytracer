@@ -6,7 +6,7 @@
 /*   By: mwelsch <mwelsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 05:32:23 by mwelsch           #+#    #+#             */
-/*   Updated: 2014/02/19 18:10:19 by mwelsch          ###   ########.fr       */
+/*   Updated: 2014/02/19 21:15:55 by mwelsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -35,7 +35,7 @@ int						create_scene(t_scene *scn)
 	obj_mat->specular = color_create(1.0, 1.0, 1.0, 1.0);
 	obj_mat->diffuse = color_create(0.8, 0.1, 0.1, 1.0);
 	obj_mat->ambient = color_create(0.0, 0.0, 0.0, 1.0);
-	obj_mat->shininess = 90.0;
+	obj_mat->shininess = 1.0;
 	floor_mat = scene_create_material(scn, "floor_material");
 	floor_mat->specular = color_create(1.0, 1.0, 1.0, 1.0);
 	floor_mat->diffuse = color_create(0.2, 0.4, 0.3, 1.0);
@@ -47,12 +47,13 @@ int						create_scene(t_scene *scn)
 							   light_mat);
 	light->type = LT_POINT;
 	light->position = vec3_create(10.0f, 100.0f, 10.0f);
-	light->direction = vec3_create(-1.0f, -1.0f, -1.0f);
+	light->direction = vec3_create(-10.0f, -100.0f, -10.0f);
 	sphere = scene_create_sphere(scn, "sphere001", obj_mat);
 	sphere->radius = 1.0f;
+	sphere->position = vec3_create(0.0f, 0.0f, 0.0f);
 	plane = scene_create_plane(scn, "plane001", floor_mat);
 	plane->normal = vec3_unit_y();
-	plane->point = vec3_create(1.0f, -5.0f, 1.0f);
+	plane->point = vec3_create(1.0f, 0.0f, 1.0f);
 	return (1);
 }
 
